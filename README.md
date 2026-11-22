@@ -5,7 +5,7 @@ bài hát nào: tải bài gốc lên, xem sóng âm, chuyển thành nốt nh�
 bằng nhạc cụ giả lập, rồi nhận tư vấn đoạn nào nên bẻ nốt / luyến kiểu gì.
 
 Bản web đang chạy trong Muse: artifact `cover-studio-tao-ban-sac-rieng`.
-Repo GitHub của dự án này (sẽ điền sau khi tạo repo):
+Repo GitHub của dự án này:
 `https://github.com/chelseafc11011996-source/cover-studio` (nhánh `main`).
 
 File `index.html` trong repo này là bản export tĩnh của webtool đó, dùng để
