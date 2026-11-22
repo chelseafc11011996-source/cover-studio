@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light dark"/>
+<link rel="icon" href="data:,"/>
+<title>Cover Studio — Tạo bản sắc riêng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF7EA;--bg2:#FFEFD6;--card:#FFFFFF;--card2:#FFF2DE;--ink:#1C1710;--muted:#6B5E4E;--line:#EADBC3;--coral:#E8552F;--coral2:#FF7A4D;--teal:#0E7C6B;--gold:#D98E04;--violet:#5B4BDB;--radius:20px;--shadow:0 12px 32px rgba(90,50,10,.12)}
+@media(prefers-color-scheme:dark){:root{--bg:#161210;--bg2:#221812;--card:#241D18;--card2:#2B211A;--ink:#FFF3DF;--muted:#C9B8A3;--line:#3D2F24;--shadow:0 12px 32px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Be Vietnam Pro",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+button,input,select,textarea{font:inherit}button,select,input,textarea,[role=button]{min-height:44px}
+a{color:var(--teal)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px 64px}
+.hero{position:relative;padding:28px 0 10px;overflow:hidden}
+.heroTop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.badge i{width:8px;height:8px;border-radius:50%;background:#4ADE80;display:block;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(38px,7vw,72px);line-height:.95;margin:18px 0 12px;letter-spacing:-.02em}
+.hero h1 em{color:var(--coral);font-style:italic}
+.hero p.lead{font-size:clamp(16px,2.4vw,20px);color:var(--muted);max-width:720px;margin:0}
+.eq{display:flex;gap:5px;align-items:flex-end;height:44px;margin:22px 0}
+.eq span{flex:1;max-width:18px;background:linear-gradient(180deg,var(--coral2),var(--gold));border-radius:99px;animation:eq 0.9s ease-in-out infinite alternate}
+.eq span:nth-child(2n){animation-duration:.65s;background:var(--teal)} .eq span:nth-child(3n){animation-duration:1.15s}
+@keyframes eq{from{height:18%}to{height:100%}}
+.notesFloat{position:absolute;right:10px;top:70px;font-size:42px;opacity:.18;animation:floaty 3.5s ease-in-out infinite}
+@keyframes floaty{50%{transform:translateY(-16px) rotate(8deg)}}
+.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin-top:0;line-height:1.2}
+.drop{border:2.5px dashed var(--coral);border-radius:18px;padding:26px 18px;text-align:center;background:var(--card2);cursor:pointer;transition:.2s}
+.drop:hover,.drop.over{transform:scale(1.01);background:var(--bg2)}
+.drop strong{font-size:19px;display:block}
+.drop p{color:var(--muted);margin:6px 0 14px;font-size:14px}
+.btn{border:0;border-radius:999px;padding:12px 20px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.btn-coral{background:var(--coral);color:#fff}.btn-teal{background:var(--teal);color:#fff}.btn-dark{background:var(--ink);color:var(--bg)}.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn:active{transform:scale(.97)}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pill{padding:8px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);font-weight:700;font-size:13px;cursor:pointer}
+.pill.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px}
+.chip b{font-size:22px;display:block;line-height:1}.chip span{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.chip select{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--card);color:var(--ink);font-weight:700}
+canvas#wave{width:100%;height:96px;background:#1C1710;border-radius:14px;display:block;margin-top:14px}
+.playerRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.playBtn{width:56px;height:56px;border-radius:50%;background:var(--coral);color:#fff;border:0;font-size:22px;cursor:pointer;flex-shrink:0;box-shadow:0 8px 20px rgba(232,85,47,.4)}
+input[type=range]{accent-color:var(--coral);min-height:36px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}@media(max-width:700px){.steps{grid-template-columns:1fr}}
+.step{background:var(--ink);color:var(--bg);border-radius:18px;padding:16px}.step b{font-size:28px;color:var(--gold)}.step p{margin:4px 0 0;opacity:.85;font-size:14px}
+.secTitle{margin:34px 0 6px;font-family:"Playfair Display",serif;font-size:clamp(28px,4.5vw,42px);line-height:1.05}
+.secSub{color:var(--muted);max-width:700px;margin:0 0 16px}
+.styles{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}@media(max-width:900px){.styles{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.styles{grid-template-columns:1fr 1fr}}
+.styleCard{border:2px solid var(--line);background:var(--card);border-radius:16px;padding:14px;cursor:pointer;text-align:left}
+.styleCard.active{border-color:var(--coral);background:var(--card2)}
+.styleCard .emoji{font-size:28px}.styleCard b{display:block;margin-top:6px}.styleCard span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block}
+.techGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}@media(max-width:900px){.techGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.techGrid{grid-template-columns:1fr}}
+.tech{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.tech h3{margin:0;font-size:17px}.tech p{margin:0;color:var(--muted);font-size:13.5px;flex:1}
+.dots{color:var(--gold);letter-spacing:2px;font-size:13px}
+.tech .row{display:flex;gap:8px;flex-wrap:wrap}.tech .row button{flex:1}
+.mini{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--teal)}
+.pianoWrap{overflow-x:auto;padding-bottom:6px}
+.piano{display:flex;position:relative;min-width:560px;height:150px;margin-top:12px}
+.wkey{flex:1;background:#fff;color:#111;border:1px solid #ddd;border-radius:0 0 8px 8px;cursor:pointer;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-size:11px;font-weight:800;position:relative}
+.wkey.scale{background:#FFE3B3}.wkey.root{background:var(--coral);color:#fff}.wkey:active{filter:brightness(.9)}
+.bkey{position:absolute;top:0;width:34px;height:92px;background:#171310;color:#fff;border:0;border-radius:0 0 6px 6px;cursor:pointer;z-index:2;font-size:9px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px}
+.bkey.scale{background:#0E7C6B}
+label.flabel{font-weight:800;font-size:13px;display:block;margin-bottom:6px}
+select.sel,textarea.ta,input.txt{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;background:var(--card);color:var(--ink)}
+textarea.ta{min-height:110px;resize:vertical}
+.lyricLine{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;padding:12px;background:var(--card2);border-radius:12px;border:1px solid var(--line)}
+.word{border:1.5px solid var(--line);background:var(--card);padding:8px 12px;border-radius:999px;cursor:pointer;font-weight:700;min-height:40px}
+.word.sel{background:var(--coral);color:#fff;border-color:var(--coral)}
+.word.orn{border-color:var(--teal);box-shadow:inset 0 -3px 0 var(--teal)}
+.timeline{display:grid;gap:10px}
+.tlRow{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}@media(max-width:600px){.tlRow{grid-template-columns:1fr}}
+.tlRow b{color:var(--coral)}
+.planList{list-style:none;padding:0;margin:10px 0;display:grid;gap:8px}
+.planList li{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.planList button{background:none;border:0;color:var(--coral);font-weight:900;cursor:pointer;font-size:18px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:13px 20px;border-radius:999px;font-weight:700;z-index:50;transition:.3s;max-width:92vw;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 0}
+.vizBars{display:flex;gap:3px;align-items:flex-end;height:28px}.vizBars i{width:5px;background:var(--teal);border-radius:99px;animation:eq .7s infinite alternate}.vizBars i:nth-child(2n){animation-duration:.5s}.vizBars i:nth-child(3n){animation-duration:1s}
+.hidden{display:none!important}
+.notePattern{font-family:ui-monospace,monospace;font-size:13px;background:var(--bg);border:1px dashed var(--line);padding:8px;border-radius:8px;word-break:break-word}
+/* ===== NOTE STUDIO (new) ===== */
+.nsSteps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}@media(max-width:760px){.nsSteps{grid-template-columns:1fr 1fr}}
+.nsStep{border:1.5px solid var(--line);border-radius:14px;padding:12px;background:var(--card2);cursor:pointer;text-align:left}
+.nsStep.active{border-color:var(--coral);background:#FFE9DC}
+.nsStep b{font-size:22px;color:var(--coral);display:block;line-height:1}
+.nsStep span{font-size:13px;font-weight:700;line-height:1.35;display:block;margin-top:4px}
+.nsStep small{color:var(--muted);line-height:1.35;display:block}
+canvas#bigWave{width:100%;height:150px;display:block;background:#17110B;border-radius:16px;cursor:crosshair;touch-action:none}
+canvas#roll{width:100%;height:210px;display:block;background:#17110B;border-radius:16px;margin-top:10px}
+.segChips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.segChip{border-radius:999px;border:1.5px solid var(--line);background:var(--card);padding:9px 14px;font-weight:800;font-size:13px;cursor:pointer}
+.segChip.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.selInfo{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}@media(max-width:700px){.selInfo{grid-template-columns:1fr 1fr}}
+.selInfo .chip b{font-size:19px}
+.instGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:10px 0}@media(max-width:760px){.instGrid{grid-template-columns:repeat(3,1fr)}}@media(max-width:460px){.instGrid{grid-template-columns:1fr 1fr}}
+.inst{border:2px solid var(--line);background:var(--card);border-radius:14px;padding:12px;cursor:pointer;text-align:center;font-weight:800}
+.inst.active{border-color:var(--teal);background:var(--card2)}
+.inst span{font-size:26px;display:block}
+.advGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}@media(max-width:820px){.advGrid{grid-template-columns:1fr}}
+.adv{border:2px solid var(--line);border-radius:16px;padding:16px;background:var(--card)}
+.adv.best{border-color:var(--coral);background:var(--card2)}
+.adv .score{font-size:28px;font-weight:900;color:var(--coral)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:8px;font-weight:700}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block;vertical-align:-2px;margin-right:5px}
+.bigPlayRow{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.bigPlayRow .btn{flex:1;min-width:150px;padding:15px 12px;font-size:15px}
+.progressLine{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:10px}
+.progressLine i{display:block;height:100%;width:0;background:var(--coral);transition:width .2s}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<div class="heroTop"><span class="badge"><i></i> Cover Studio • Phòng lab giọng hát</span><span style="font-weight:700;color:var(--muted);font-size:13px">Không cần nhạc lý giỏi — chỉ cần dám khác</span></div>
+<div class="notesFloat">♪ ♫ ♩</div>
+<h1>Hát lại bài cũ,<br><em>theo cách chỉ bạn</em><br>mới hát được.</h1>
+<p class="lead">Ca sĩ chuyên nghiệp không hát y hệt bản gốc — họ <strong>bẻ nốt, luyến láy, đổi nhịp thở</strong> ở đúng vài chỗ để biến bài hát thành của mình. Studio này giúp bạn làm y hệt: tải bài gốc lên, tách lời &amp; nhạc, rồi thử từng biến tấu cho đến khi tìm thấy “chất riêng” của bạn.</p>
+<div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-coral" href="#upload">🎧 Bắt đầu — tải bài hát lên</a><a class="btn btn-ghost" href="#lab">Xem phòng lab luyến láy ↓</a></div>
+</header>
+
+<div class="steps">
+<div class="step"><b>01</b><strong style="display:block">Nghe &amp; hiểu bài gốc</strong><p>Tải file lên, Studio phân tích tông, nhịp, quãng giọng và cấu trúc bài.</p></div>
+<div class="step"><b>02</b><strong style="display:block">Tách lời — tách nhạc</strong><p>Nghe riêng giọng gốc để học, nghe riêng beat để tập hát đè lên.</p></div>
+<div class="step"><b>03</b><strong style="display:block">Bẻ nốt &amp; đóng dấu</strong><p>Chọn 2–3 điểm nhấn thật “bạn” là đủ. Ít nhưng chất — đó là bản sắc.</p></div>
+</div>
+
+<!-- UPLOAD + ANALYSIS -->
+<section id="upload" class="grid2">
+<div class="card">
+<h2>🎵 1. Tải bài hát gốc lên</h2>
+<p style="color:var(--muted);margin-top:0">MP3, WAV, M4A đều được. File chỉ xử lý ngay trong trình duyệt của bạn để nghe &amp; phân tích sóng âm.</p>
+<div class="drop" id="dropZone" role="button" tabindex="0" aria-label="Tải bài hát lên">
+<strong>Thả file nhạc vào đây</strong><p>hoặc bấm để chọn file • Chưa có file? Bấm “Nghe bài mẫu” bên dưới để thử ngay</p>
+<button class="btn btn-dark" id="pickBtn" type="button">Chọn file nhạc</button>
+<button class="btn btn-ghost" id="demoBtn" type="button">▶ Nghe giai điệu mẫu</button>
+<input type="file" id="fileInput" accept="audio/*" class="hidden">
+</div>
+<div id="fileInfo" class="hidden">
+<div class="playerRow"><button class="playBtn" id="playBtn" aria-label="Phát / dừng">▶</button><div style="flex:1;min-width:160px"><strong id="trackName">Bài hát của bạn</strong><div style="font-size:13px;color:var(--muted)"><span id="curTime">0:00</span> / <span id="durTime">0:00</span> • <span id="playState">Sẵn sàng</span></div><input type="range" id="seek" value="0" min="0" max="100" style="width:100%" aria-label="Tua bài hát"></div><div class="vizBars" aria-hidden="true"><i style="height:40%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:75%"></i></div></div>
+<canvas id="wave" width="800" height="96"></canvas>
+<audio id="audioEl" preload="metadata" crossorigin="anonymous"></audio>
+</div>
+<h3 style="margin:20px 0 6px">🔀 Tách lời &amp; nhạc — nghe từng lớp</h3>
+<p style="color:var(--muted);font-size:14px;margin:0">Đây là tách lớp ước lượng bằng xử lý âm thanh trong trình duyệt (lọc tần số &amp; triệt stereo), không phải tách stem bằng AI máy chủ — đủ tốt để học theo giọng gốc và tập hát trên beat.</p>
+<div class="pills" role="group" aria-label="Chế độ tách lớp">
+<button class="pill active" data-mode="original">🎧 Bản gốc</button>
+<button class="pill" data-mode="karaoke">🎹 Chỉ nhạc (karaoke)</button>
+<button class="pill" data-mode="vocal">🎤 Chỉ giọng (a cappella)</button>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<div><label class="flabel" for="volVocal">Âm lượng giọng</label><input type="range" id="volVocal" min="0" max="100" value="90" style="width:100%"></div>
+<div><label class="flabel" for="speedSel">Tốc độ tập hát</label><select id="speedSel" class="sel"><option value="0.75">Chậm 0.75× — tập luyến</option><option value="0.9">0.9× — dễ theo</option><option value="1" selected>Chuẩn 1×</option><option value="1.1">Nhanh 1.1×</option></select></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🔍 2. “Giải phẫu” bài gốc</h2>
+<p style="color:var(--muted);margin-top:0">Sau khi tải file, Studio ước lượng các thông số dưới đây từ sóng âm. Bạn cứ chỉnh lại nếu tai bạn nghe khác — tai bạn là chuẩn cuối cùng.</p>
+<div class="chips">
+<div class="chip"><span>Tông chủ (Key) — chưa phân tích</span><b id="keyVal">—</b><select id="keySel" aria-label="Chọn tông"><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option selected>A</option><option>B</option></select><span style="text-transform:none;letter-spacing:0">Ô chọn là tông làm việc mặc định cho thang âm bên dưới, chưa phải kết quả phân tích — tải file lên để ước lượng.</span></div>
+<div class="chip"><span>Nhịp (BPM) — chưa phân tích</span><b id="bpmVal">—</b><select id="bpmSel" aria-label="Chọn nhịp"><option value="72">72 • Ballad chậm</option><option value="84" selected>84 • Ballad / Pop</option><option value="96">96 • Pop vừa</option><option value="110">110 • Pop sôi động</option><option value="124">124 • Dance</option></select></div>
+<div class="chip"><span>Thời lượng</span><b id="durVal">—</b><span style="text-transform:none;letter-spacing:0">Tải file để đo chính xác</span></div>
+<div class="chip"><span>Cảm xúc chủ đạo</span><b style="font-size:18px" id="moodVal">— chờ bài của bạn</b><span style="text-transform:none;letter-spacing:0">Sẽ gợi ý sau khi có file: ví dụ hát nhỏ ở verse, bùng ở chorus</span></div>
+</div>
+<div style="background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:14px">
+<strong>🗺️ Cấu trúc bài thường gặp — đánh dấu chỗ nên “bẻ”</strong>
+<div class="timeline" style="margin-top:10px">
+<div class="tlRow"><b>VERSE 1</b><span>Hát gần như gốc, chỉ đổi nhịp thở 1 chỗ để khán giả thấy “à, người này khác”.</span><button class="btn btn-ghost" data-add="Verse 1 — đổi nhịp thở, hát mộc">+ Thêm</button></div>
+<div class="tlRow"><b>CHORUS</b><span>Điểm nhấn chính: luyến dài ở từ cuối câu, hoặc lên quãng 8 ở lần chorus cuối.</span><button class="btn btn-ghost" data-add="Chorus — luyến dài từ cuối câu + lên quãng 8 ở chorus cuối">+ Thêm</button></div>
+<div class="tlRow"><b>BRIDGE</b><span>Nơi tự do nhất: hạ nửa tông cảm xúc, hát thì thầm / falsetto rồi bùng lên.</span><button class="btn btn-ghost" data-add="Bridge — hát thì thầm, falsetto rồi bùng lên">+ Thêm</button></div>
+</div></div>
+<p style="font-size:13px;color:var(--muted)">💡 Nguyên tắc vàng của ca sĩ cover: <strong>chỉ bẻ 2–3 chỗ thật đắt</strong>. Bẻ khắp bài sẽ thành “làm quá” — giữ 80% quen thuộc, 20% bất ngờ mới khiến người nghe nhớ bạn.</p>
+</div>
+</section>
+
+<!-- ===== NOTE STUDIO: SÓNG ÂM → NỐT NHẠC → NHẠC CỤ → TƯ VẤN BẺ NỐT ===== -->
+<h2 class="secTitle" id="noteStudio">Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼</h2>
+<p class="secSub">Đây là phần trực quan nhất của Studio: bài hát được <strong>chuyển thành từng nốt nhạc trên khuông piano-roll</strong>, nhạc cụ sẽ <strong>hát lại đúng giai điệu gốc bằng tiếng đàn</strong>, rồi Studio mới tư vấn <strong>chọn đoạn nào để bẻ nốt</strong> cho hay. Làm lần lượt 4 bước dưới đây — không cần biết nhạc lý.</p>
+<div class="card" style="padding:22px">
+<div class="nsSteps" role="tablist" aria-label="4 bước">
+<button class="nsStep active" data-nsstep="1"><b>1</b><span>Xem sóng &amp; nốt</span><small>Tải bài lên — nốt nhạc tự hiện dưới sóng âm</small></button>
+<button class="nsStep" data-nsstep="2"><b>2</b><span>Kéo chọn đoạn</span><small>Kéo chuột / ngón tay trên sóng để khoanh đoạn muốn bẻ</small></button>
+<button class="nsStep" data-nsstep="3"><b>3</b><span>Nghe nhạc cụ giả lập</span><small>Piano / guitar… phát lại giai điệu gốc</small></button>
+<button class="nsStep" data-nsstep="4"><b>4</b><span>Nhận tư vấn &amp; bẻ nốt</span><small>Chọn chiêu hợp nhất với đoạn vừa khoanh</small></button>
+</div>
+
+<div id="nsEmpty" style="text-align:center;padding:22px 12px;background:var(--card2);border:1.5px dashed var(--coral);border-radius:16px">
+<div style="font-size:38px">🎵 → 🎹</div>
+<strong style="font-size:18px">Chưa có nốt nhạc nào — hãy tải bài hát ở mục 1 phía trên</strong>
+<p style="color:var(--muted);max-width:560px;margin:8px auto">Ngay khi có file, Studio sẽ quét từng đoạn âm thanh, đoán cao độ và vẽ thành nốt. Hoặc thử ngay không cần file:</p>
+<button class="btn btn-coral" id="nsDemoBtn" type="button">▶ Tạo bài mẫu &amp; xem nốt nhạc ngay</button>
+<p style="font-size:12.5px;color:var(--muted)">Lưu ý trung thực: đây là <em>ước lượng giai điệu chính (giọng hát / bè chính)</em> từ bản phối nhiều nhạc cụ, làm ngay trong trình duyệt — đủ để học &amp; bẻ nốt, không thay thế bản ký âm phòng thu.</p>
+</div>
+
+<div id="nsMain" class="hidden">
+<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">
+<strong style="font-size:17px">🌊 Sóng âm toàn bài — <span style="color:var(--coral)">kéo để khoanh đoạn</span></strong>
+<span id="nsStatus" style="font-size:13px;color:var(--muted);font-weight:700">Đang chờ phân tích…</span>
+</div>
+<canvas id="bigWave" width="1040" height="150" aria-label="Sóng âm — kéo để chọn đoạn"></canvas>
+<div class="legend"><span><i style="background:#FF7A4D"></i>Đoạn đang chọn</span><span><i style="background:#FFD166"></i>Đoạn cao trào (to nhất)</span><span><i style="background:#0E7C6B"></i>Đoạn yên / dạo đầu</span><span><i style="background:#fff"></i>Đường trắng = đang phát tới đâu</span></div>
+<div class="segChips" id="segChips" aria-label="Chọn nhanh đoạn">
+<button class="segChip" data-seg="all">↔ Toàn bài</button>
+<button class="segChip active" data-seg="climax">🔥 Đoạn cao trào — nên bẻ nhất</button>
+<button class="segChip" data-seg="first">🌅 10 giây đầu</button>
+<button class="segChip" data-seg="quiet">🌙 Đoạn yên nhất</button>
+<button class="segChip" data-seg="last">🏁 10 giây cuối</button>
+</div>
+<div class="selInfo">
+<div class="chip"><span>Đoạn đang chọn</span><b id="selRange">—</b><span style="text-transform:none;letter-spacing:0" id="selDur">Kéo trên sóng âm để đổi</span></div>
+<div class="chip"><span>Số nốt trong đoạn</span><b id="selNotes">—</b><span style="text-transform:none;letter-spacing:0">Nốt càng dày → càng dễ chạy riff</span></div>
+<div class="chip"><span>Quãng giọng đoạn này</span><b id="selRangeNote" style="font-size:16px">—</b><span style="text-transform:none;letter-spacing:0">Từ nốt thấp nhất → cao nhất</span></div>
+<div class="chip"><span>Độ “đáng bẻ”</span><b id="selScore">—</b><span style="text-transform:none;letter-spacing:0">Dựa trên độ dài nốt, cao độ &amp; năng lượng</span></div>
+</div>
+
+<strong style="font-size:17px">🎹 Piano-roll — giai điệu đã chuyển thành nốt (chỉ đoạn đang chọn)</strong>
+<p style="color:var(--muted);font-size:13.5px;margin:4px 0 0">Mỗi ô ngang là 1 nốt: <strong>ô càng dài = hát càng lâu, ô càng cao = nốt càng cao</strong>. Ô xám = giai điệu gốc • Ô cam = sau khi bẻ nốt. Bấm vào 1 nốt để nghe riêng nốt đó.</p>
+<canvas id="roll" width="1040" height="210" aria-label="Piano roll các nốt trong đoạn chọn"></canvas>
+<div class="notePattern" id="nsNoteList" style="margin-top:10px">—</div>
+
+<h3 style="margin:22px 0 4px">🎸 Bước 3 — Cho nhạc cụ “hát lại” giai điệu gốc</h3>
+<p style="color:var(--muted);font-size:14px;margin:0">Chọn một nhạc cụ. Nhạc cụ sẽ phát lại <strong>đúng các nốt vừa tách được</strong> trong đoạn bạn khoanh — nghe như vậy bạn sẽ “nhìn thấy” giai điệu bằng tai, tách khỏi lời hát.</p>
+<div class="instGrid" id="instGrid">
+<button class="inst active" data-inst="piano"><span>🎹</span>Piano</button>
+<button class="inst" data-inst="guitar"><span>🎸</span>Guitar</button>
+<button class="inst" data-inst="violin"><span>🎻</span>Violin</button>
+<button class="inst" data-inst="flute"><span>🪈</span>Sáo / Flute</button>
+<button class="inst" data-inst="box"><span>🎵</span>Hộp nhạc</button>
+</div>
+<div class="bigPlayRow">
+<button class="btn btn-dark" id="playOrigSegBtn">▶ A · Nghe đoạn gốc</button>
+<button class="btn btn-teal" id="playInstBtn">🎹 B · Nhạc cụ phát lại gốc</button>
+<button class="btn btn-coral" id="playBentBtn">✨ C · Nhạc cụ phát bản ĐÃ BẺ NỐT</button>
+</div>
+<div class="progressLine" aria-hidden="true"><i id="nsProg"></i></div>
+<p style="font-size:13px;color:var(--muted);margin:8px 0 0">Nghe theo thứ tự <strong>A → B → C</strong>: A là ca sĩ gốc, B là giai điệu “trần trụi” qua tiếng đàn, C là phiên bản mang dấu ấn của bạn. Chênh nhau ở đâu — đó chính là bản sắc.</p>
+
+<h3 style="margin:22px 0 4px">🧭 Bước 4 — Tư vấn: đoạn này nên bẻ kiểu gì?</h3>
+<p style="color:var(--muted);font-size:14px;margin:0" id="advSummary">Studio đọc các nốt trong đoạn bạn chọn (nốt dài, nốt cao, mật độ…) và xếp hạng 3 chiêu hợp nhất. Bấm <strong>Áp dụng &amp; nghe thử</strong> — piano-roll sẽ vẽ lại bằng màu cam để bạn thấy nốt đã thay đổi ra sao.</p>
+<div class="advGrid" id="advGrid"></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+<button class="btn btn-coral" id="nsAddPlanBtn">⭐ Chốt đoạn này + chiêu đã chọn vào Bản đồ cover</button>
+<button class="btn btn-ghost" id="nsResetBendBtn">↩ Trở về giai điệu gốc</button>
+</div>
+</div>
+</div>
+
+<!-- STYLE -->
+<h2 class="secTitle">Bạn muốn người nghe nhớ mình là ai?</h2>
+<p class="secSub">Chọn một “chất” trước — Studio sẽ ưu tiên gợi ý kỹ thuật hợp với chất đó. Đổi lúc nào cũng được.</p>
+<div class="styles" id="styles">
+<button class="styleCard active" data-style="R&B Luyến Láy" data-tip="Ưu tiên: Melisma, Riff & Run, bẻ nốt cuối câu. Thang âm hợp: Minor Pentatonic + Blues."><span class="emoji">🌙</span><b>R&amp;B Luyến Láy</b><span>Mượt, nhiều run, cảm xúc sâu — kiểu Soobin / Mỹ Tâm bản R&amp;B</span></button>
+<button class="styleCard" data-style="Ballad Mộc" data-tip="Ưu tiên: Vibrato nhẹ, đổi nhịp thở, hát nhỏ gần mic. Thang âm hợp: Major + Mixolydian."><span class="emoji">🕯️</span><b>Ballad Mộc</b><span>Chân thành, ít kỹ thuật, nhiều cảm xúc — kiểu hát kể chuyện</span></button>
+<button class="styleCard" data-style="Indie Ngẫu Hứng" data-tip="Ưu tiên: Bẻ giai điệu, đổi phách, hát lệch nhịp có chủ đích. Thang âm hợp: Dorian."><span class="emoji">🌿</span><b>Indie Ngẫu Hứng</b><span>Lệch nhịp, bẻ giai điệu lạ, rất “tôi” — không giống ai</span></button>
+<button class="styleCard" data-style="Jazz / Soul" data-tip="Ưu tiên: Blue note, scat, swing phách. Thang âm hợp: Blues + Dorian."><span class="emoji">🎷</span><b>Jazz / Soul</b><span>Blue note, phiêu, ngẫu hứng theo thang Blues</span></button>
+<button class="styleCard" data-style="Pop Bùng Nổ" data-tip="Ưu tiên: Lên quãng 8, belt, ad-lib cuối bài. Thang âm hợp: Major Pentatonic."><span class="emoji">🔥</span><b>Pop Bùng Nổ</b><span>Cao trào mạnh, nốt cao sáng, ad-lib cuối bài</span></button>
+</div>
+<div class="card" style="margin-top:12px"><span class="mini">Gợi ý theo chất đã chọn</span><p id="styleTip" style="margin:6px 0 0;font-size:17px;font-weight:600">Ưu tiên: Melisma, Riff &amp; Run, bẻ nốt cuối câu. Thang âm hợp: Minor Pentatonic + Blues.</p></div>
+
+<!-- TECHNIQUE LAB -->
+<h2 class="secTitle" id="lab">Phòng lab luyến láy</h2>
+<p class="secSub">Mỗi thẻ là một “chiêu” ca sĩ hay dùng. Bấm <strong>Nghe thử</strong> để nghe giai điệu gốc → biến tấu bằng piano mẫu, rồi <strong>+ Bản đồ</strong> để chốt chiêu đó vào kế hoạch cover của bạn.</p>
+<div class="techGrid" id="techGrid"></div>
+
+<!-- SCALE LAB -->
+<h2 class="secTitle">Thang âm — “bảng màu” để bạn tự sáng tạo</h2>
+<p class="secSub">Bẻ nốt mà vẫn hay là nhờ bẻ <em>trong thang âm</em>. Chọn tông &amp; thang âm, bấm lên phím đàn để nghe, và dùng câu luyến gợi ý tự sinh từ đúng những nốt đó.</p>
+<div class="card">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div><label class="flabel" for="scaleKey">Tông chủ</label><select id="scaleKey" class="sel"><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option selected>A</option><option>B</option></select></div>
+<div><label class="flabel" for="scaleType">Thang âm</label><select id="scaleType" class="sel"><option value="pentMinor" selected>Minor Pentatonic — dễ luyến nhất, rất R&amp;B</option><option value="pentMajor">Major Pentatonic — sáng, pop, dễ hát</option><option value="blues">Blues — có blue note, phiêu &amp; chất</option><option value="dorian">Dorian — buồn nhưng sáng, rất indie/jazz</option><option value="major">Major (trưởng) — nền tảng pop/ballad</option><option value="minor">Natural Minor (thứ) — ballad da diết</option></select></div>
+</div>
+<div class="pianoWrap"><div class="piano" id="piano"></div></div>
+<p style="font-size:13px;color:var(--muted);margin:8px 0 0">Phím cam = nốt chủ • Phím cam nhạt / xanh = nốt thuộc thang âm — bẻ vào đây là “lạ mà vẫn đúng nhạc”.</p>
+<div style="background:var(--card2);border-radius:14px;padding:14px;margin-top:14px"><span class="mini">Câu luyến gợi ý từ thang âm này</span><div class="notePattern" id="scaleRun" style="margin-top:8px">—</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn btn-teal" id="playRunBtn">▶ Nghe câu luyến này</button><button class="btn btn-ghost" id="newRunBtn">🎲 Đổi câu luyến khác</button><button class="btn btn-ghost" id="addRunBtn">+ Thêm vào bản đồ</button></div></div>
+</div>
+
+<!-- LYRIC LAB -->
+<h2 class="secTitle">Xưởng bẻ câu hát — làm trên chính lời bài của bạn</h2>
+<p class="secSub">Dán lời bài hát vào, bấm vào từng câu để chọn từ bạn muốn “đóng dấu”, chọn chiêu và độ đậm — Studio sinh giai điệu biến tấu để bạn nghe thử ngay.</p>
+<div class="grid2">
+<div class="card">
+<label class="flabel" for="lyricInput">Lời bài hát (mỗi dòng là một câu)</label>
+<textarea id="lyricInput" class="ta">Anh nhớ em nhiều lắm trong đêm dài
+Giá như ta chưa từng xa cách nhau
+Em ơi đừng đi, ở lại bên anh
+Ta hát cho nhau nghe khúc ca ngày xưa</textarea>
+<button class="btn btn-dark" id="parseLyricBtn" style="margin-top:10px">✂️ Tách câu &amp; từng từ</button>
+<div id="lyricLines"></div>
+</div>
+<div class="card">
+<label class="flabel">Từ đang chọn</label><div style="font-size:26px;font-weight:900" id="selWord">“lắm”</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
+<div><label class="flabel" for="ornTech">Chiêu biến tấu</label><select id="ornTech" class="sel"><option value="melisma">Luyến láy (Melisma) — kéo 1 từ thành nhiều nốt</option><option value="bend">Bẻ nốt — trượt lên/xuống nửa cung</option><option value="run">Riff &amp; Run — chạy nốt nhanh cuối câu</option><option value="octave">Nhảy quãng 8 — bật lên cao bất ngờ</option><option value="vibrato">Vibrato — rung nốt dài đầy cảm xúc</option><option value="falsetto">Lật falsetto — chuyển giọng gió</option></select></div>
+<div><label class="flabel" for="ornLevel">Độ đậm: <span id="ornLevelVal">Vừa — dễ hát theo</span></label><input type="range" id="ornLevel" min="1" max="3" value="2" style="width:100%"></div>
+</div>
+<svg id="contour" viewBox="0 0 520 140" style="width:100%;background:#1C1710;border-radius:14px;margin-top:14px" role="img" aria-label="Đường giai điệu biến tấu"></svg>
+<div class="notePattern" id="varNotes">Chọn một từ rồi bấm “Sinh biến tấu”.</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn btn-coral" id="genVarBtn">✨ Sinh biến tấu</button><button class="btn btn-ghost" id="playOrigBtn">▶ Nghe câu gốc</button><button class="btn btn-teal" id="playVarBtn">▶ Nghe bản bẻ nốt</button><button class="btn btn-ghost" id="addVarBtn">+ Chốt vào bản đồ</button></div>
+<div style="margin-top:16px;background:var(--card2);border-radius:12px;padding:12px;font-size:14px"><strong>🎤 Cách tập chiêu này trong 10 phút:</strong><ol style="margin:6px 0 0;padding-left:18px"><li>Nghe bản bẻ nốt ở tốc độ 0.75×, hát theo từng 2 nốt.</li><li>Thu âm bằng điện thoại, nghe lại — chỗ nào “giả” thì giảm độ đậm.</li><li>Chỉ giữ lại biến tấu nếu hát 3 lần đều thấy “đây là mình”.</li></ol></div>
+</div>
+</div>
+
+<!-- COVER MAP -->
+<h2 class="secTitle">Bản đồ cover độc bản của bạn</h2>
+<p class="secSub">Tất cả những gì bạn đã chốt nằm ở đây — đây chính là “kịch bản dấu ấn” để bạn mang vào phòng thu / buổi quay cover.</p>
+<div class="card">
+<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><strong id="planTitle">Bản đồ cho phong cách: R&amp;B Luyến Láy</strong><span style="color:var(--muted);font-size:13px" id="planCount">3 điểm nhấn đã chốt</span></div>
+<ul class="planList" id="planList"></ul>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-coral" id="downloadBtn">⬇ Tải bản đồ (.txt)</button><button class="btn btn-ghost" id="copyBtn">📋 Sao chép bản đồ</button><button class="btn btn-ghost" id="clearBtn">Xoá hết, làm lại</button></div>
+<p style="font-size:13px;color:var(--muted)">Mẹo trình diễn: quay 2 bản — một bản hát “an toàn” và một bản dùng hết bản đồ này. Bản thứ hai thường là bản người ta nhớ.</p>
+</div>
+
+<footer>Cover Studio — Hát lại không phải hát giống. Hát lại là kể lại câu chuyện bằng giọng của chính mình. ♪<br>Âm thanh mẫu trong trang được tổng hợp trực tiếp bằng Web Audio trong trình duyệt; phân tích tông/nhịp là ước lượng để bạn chỉnh lại bằng tai của mình.</footer>
+</div>
+<div class="toast" id="toast">Đã thêm vào bản đồ cover ✓</div>
+
+<script>
+var NOTE_NAMES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+var SCALES={pentMinor:[0,3,5,7,10],pentMajor:[0,2,4,7,9],blues:[0,3,5,6,7,10],dorian:[0,2,3,5,7,9,10],major:[0,2,4,5,7,9,11],minor:[0,2,3,5,7,8,10]};
+var SCALE_LABEL={pentMinor:'Minor Pentatonic',pentMajor:'Major Pentatonic',blues:'Blues',dorian:'Dorian',major:'Major',minor:'Natural Minor'};
+var KEY_IDX={C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+function freq(midi){return 440*Math.pow(2,(midi-69)/12)}
+function noteName(midi){return NOTE_NAMES[midi%12]+(Math.floor(midi/12)-1)}
+var actx=null;function ac(){if(!actx)actx=new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume();return actx}
+function playTone(midi,t,dur,type){var c=ac(),o=c.createOscillator(),o2=c.createOscillator(),g=c.createGain();o.type=type||'triangle';o2.type='sine';o.frequency.value=freq(midi);o2.frequency.value=freq(midi)*2;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.28,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g);o2.connect(g);g.connect(c.destination);o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05)}
+function playSeq(notes,gap){gap=gap||0.32;var c=ac(),t=c.currentTime+.06;notes.forEach(function(n,i){playTone(n,t+i*gap,Math.max(.35,gap*1.4))});return notes.length*gap}
+function toast(msg){var el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(function(){el.classList.remove('show')},2200)}
+
+/* TECHNIQUES */
+var TECHS=[
+{name:'Luyến láy — Melisma',icon:'〰️',diff:2,desc:'Một từ được hát thành 4–8 nốt liền nhau. Chiêu “đóng dấu” kinh điển của R&B — nghe là biết ai hát.',orig:[64,65,67],vari:[64,65,67,69,67,65,64,62]},
+{name:'Bẻ nốt cuối câu',icon:'↗️',diff:1,desc:'Thay vì kết câu đúng nốt gốc, trượt lên hoặc xuống một nốt trong thang âm. Nhỏ thôi mà cực kỳ dễ nhớ.',orig:[67,65,64],vari:[67,65,64,67,69]},
+{name:'Riff & Run nhanh',icon:'⚡',diff:3,desc:'Chạy một chùm nốt nhanh ở cuối câu hát. Khó, nhưng làm đúng 1 lần trong bài là đủ thành thương hiệu.',orig:[69,67,64],vari:[69,67,65,64,62,60,62,64]},
+{name:'Vibrato — Rung nốt',icon:'〰',diff:2,desc:'Giữ nốt dài rồi rung nhẹ ở đuôi nốt. Biến một câu hát bình thường thành đầy nước mắt.',orig:[64,67],vari:[64,67,67,67]},
+{name:'Lật giọng gió — Falsetto Flip',icon:'🕊️',diff:2,desc:'Đang hát giọng thật, bất ngờ lật lên giọng gió ở một từ. Tạo cảm giác mong manh, rất riêng.',orig:[64,67,69],vari:[64,67,81]},
+{name:'Nhảy quãng 8',icon:'🚀',diff:2,desc:'Câu hát lặp lại lần hai thì bật lên đúng nốt đó nhưng cao hơn một quãng 8. Cao trào tức thì.',orig:[60,64,67],vari:[60,64,79]},
+{name:'Hát lệch phách',icon:'🎭',diff:3,desc:'Vào câu chậm hơn beat nửa nhịp có chủ đích (laid-back). Chất indie/jazz — nghe “lười” mà cực kỳ có gu.',orig:[64,64,67],vari:[62,64,67,65]},
+{name:'Ad-lib cuối bài',icon:'✨',diff:1,desc:'Ở chorus cuối, hát thêm “yeah…”, “oh…” hoặc một câu luyến tự do trên nền giai điệu chính.',orig:[67,69,72],vari:[72,74,76,74,72,69,67]}
+];
+var tg=document.getElementById('techGrid');
+TECHS.forEach(function(t,i){var d=document.createElement('div');d.className='tech';d.innerHTML='<span style="font-size:26px">'+t.icon+'</span><h3>'+t.name+'</h3><div class="dots" aria-label="Độ khó">'+'●'.repeat(t.diff)+'○'.repeat(3-t.diff)+' <span style="color:var(--muted);letter-spacing:0">độ khó '+t.diff+'/3</span></div><p>'+t.desc+'</p><div class="notePattern">'+t.vari.map(noteName).join(' → ')+'</div><div class="row"><button class="btn btn-teal" data-play="'+i+'">▶ Nghe thử</button><button class="btn btn-ghost" data-addtech="'+i+'">+ Bản đồ</button></div>';tg.appendChild(d)});
+tg.addEventListener('click',function(e){var p=e.target.closest('[data-play]'),a=e.target.closest('[data-addtech]');if(p){var t=TECHS[+p.dataset.play];toast('Đang phát: gốc → biến tấu “'+t.name+'”');playSeq(t.orig,.3);setTimeout(function(){playSeq(t.vari,.22)},t.orig.length*300+350)}if(a){addPlan(TECHS[+a.dataset.addtech].name+' — '+TECHS[+a.dataset.addtech].vari.map(noteName).join(' → '))}});
+
+/* PLAN */
+var plan=['Chorus — luyến dài từ cuối câu + lên quãng 8 ở chorus cuối','Verse 1 — đổi nhịp thở, hát mộc, gần mic','Bridge — hát thì thầm, falsetto rồi bùng lên'];
+var curStyle='R&B Luyến Láy';
+function renderPlan(){var ul=document.getElementById('planList');ul.innerHTML='';plan.forEach(function(p,i){var li=document.createElement('li');li.innerHTML='<span>⭐ '+p+'</span>';var b=document.createElement('button');b.textContent='×';b.setAttribute('aria-label','Xoá');b.onclick=function(){plan.splice(i,1);renderPlan()};li.appendChild(b);ul.appendChild(li)});document.getElementById('planCount').textContent=plan.length+' điểm nhấn đã chốt';document.getElementById('planTitle').textContent='Bản đồ cho phong cách: '+curStyle}
+function addPlan(txt){plan.push(txt);renderPlan();toast('Đã chốt vào bản đồ cover ✓')}
+renderPlan();
+document.querySelectorAll('[data-add]').forEach(function(b){b.addEventListener('click',function(){addPlan(b.dataset.add)})});
+document.getElementById('clearBtn').onclick=function(){plan=[];renderPlan();toast('Đã xoá — bắt đầu lại từ đầu nhé')};
+document.getElementById('downloadBtn').onclick=function(){var txt='BẢN ĐỒ COVER ĐỘC BẢN\nPhong cách: '+curStyle+'\nTông: '+document.getElementById('scaleKey').value+' • Thang âm: '+SCALE_LABEL[document.getElementById('scaleType').value]+'\n\n'+plan.map(function(p,i){return (i+1)+'. '+p}).join('\n')+'\n\n— Tạo bằng Cover Studio';var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain'}));a.download='ban-do-cover.txt';a.click();toast('Đã tải bản đồ cover ✓')};
+document.getElementById('copyBtn').onclick=function(){var txt=plan.join('\n');if(navigator.clipboard)navigator.clipboard.writeText(txt).then(function(){toast('Đã sao chép bản đồ ✓')})};
+
+/* STYLES */
+document.getElementById('styles').addEventListener('click',function(e){var c=e.target.closest('.styleCard');if(!c)return;document.querySelectorAll('.styleCard').forEach(function(x){x.classList.remove('active')});c.classList.add('active');curStyle=c.dataset.style;document.getElementById('styleTip').textContent=c.dataset.tip;renderPlan();toast('Đã chọn chất: '+curStyle)});
+
+/* PIANO + SCALE */
+var curRun=[];
+function rootMidi(){var key=document.getElementById('scaleKey').value;var r=60+KEY_IDX[key];if(r>69)r-=12;return r} /* tonic in octave 4: C4..A4 */
+function buildPiano(){var root=rootMidi(),type=document.getElementById('scaleType').value,scale=SCALES[type];var p=document.getElementById('piano');p.innerHTML='';var whites=[0,2,4,5,7,9,11,12,14,16,17,19,21,23,24];whites.forEach(function(off){var midi=60+off;var pc=((midi-root)%12+12)%12;var b=document.createElement('button');b.className='wkey'+(scale.indexOf(pc)>=0?' scale':'')+(pc===0?' root':'');b.textContent=noteName(midi);b.onclick=function(){playTone(midi,ac().currentTime+.02,.7)};p.appendChild(b)});genRun()}
+function scaleNotes(){var root=rootMidi(),type=document.getElementById('scaleType').value;return SCALES[type].map(function(s){return root+s}).concat([root+12])}
+function genRun(){var ns=scaleNotes(),run=[],idx=Math.floor(ns.length/2);for(var i=0;i<6;i++){run.push(ns[idx]);idx+=Math.random()>.5?1:-1;if(idx<0)idx=0;if(idx>=ns.length)idx=ns.length-1}curRun=run;document.getElementById('scaleRun').textContent=run.map(noteName).join(' → ')+'   •   Hát trên từ cuối câu, kéo dài khoảng 1 nhịp';}
+document.getElementById('scaleKey').addEventListener('change',buildPiano);
+document.getElementById('scaleType').addEventListener('change',buildPiano);
+document.getElementById('newRunBtn').onclick=genRun;
+document.getElementById('playRunBtn').onclick=function(){playSeq(curRun,.24);toast('Đang phát câu luyến gợi ý ♪')};
+document.getElementById('addRunBtn').onclick=function(){addPlan('Câu luyến tự sáng tạo ('+SCALE_LABEL[document.getElementById('scaleType').value]+'): '+curRun.map(noteName).join(' → '))};
+buildPiano();
+
+/* UPLOAD / AUDIO */
+var audio=document.getElementById('audioEl'),audioCtx=null,mode='original',gains={};
+function setupGraph(){if(audioCtx)return;try{audioCtx=ac();var src=audioCtx.createMediaElementSource(audio);var master=audioCtx.createGain();master.gain.value=.95;master.connect(audioCtx.destination);var og=audioCtx.createGain();src.connect(og);og.connect(master);var split=audioCtx.createSplitter(2);src.connect(split);var inv=audioCtx.createGain();inv.gain.value=-1;var kMerge=audioCtx.createChannelMerger(1);var lGain=audioCtx.createGain(),rGain=audioCtx.createGain();split.connect(lGain,0);split.connect(rGain,1);rGain.connect(inv);lGain.connect(kMerge,0);inv.connect(kMerge,0);var kg=audioCtx.createGain();kg.gain.value=0;kMerge.connect(kg);kg.connect(master);var vMerge=audioCtx.createChannelMerger(1);lGain.connect(vMerge,0);rGain.connect(vMerge,0);var bp=audioCtx.createBiquadFilter();bp.type='bandpass';bp.frequency.value=1100;bp.Q.value=.6;var vg=audioCtx.createGain();vg.gain.value=0;vMerge.connect(bp);bp.connect(vg);vg.connect(master);gains={original:og,karaoke:kg,vocal:vg}}catch(e){}}
+function setMode(m){mode=m;document.querySelectorAll('[data-mode]').forEach(function(b){b.classList.toggle('active',b.dataset.mode===m)});if(gains.original){gains.original.gain.value=m==='original'?1:0;gains.karaoke.gain.value=m==='karaoke'?1.4:0;gains.vocal.gain.value=m==='vocal'?1.6:0}toast(m==='original'?'Đang nghe: bản gốc':m==='karaoke'?'Đang nghe: chỉ nhạc — hát đè lên nào!':'Đang nghe: chỉ giọng — học cách ca sĩ gốc xử lý câu hát')}
+document.querySelectorAll('[data-mode]').forEach(function(b){b.addEventListener('click',function(){setupGraph();setMode(b.dataset.mode)})});
+function fmt(s){if(!isFinite(s))return'0:00';return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+function drawWave(buf){var cv=document.getElementById('wave'),ctx=cv.getContext('2d'),data=buf.getChannelData(0),step=Math.ceil(data.length/cv.width),h=cv.height;ctx.fillStyle='#1C1710';ctx.fillRect(0,0,cv.width,h);ctx.fillStyle='#FF7A4D';for(var x=0;x<cv.width;x++){var min=1,max=-1;for(var j=0;j<step;j++){var v=data[x*step+j]||0;if(v<min)min=v;if(v>max)max=v}ctx.fillRect(x,(1+min)*h/2,1,Math.max(1,(max-min)*h))}}
+function estimate(buf){var dur=buf.duration;document.getElementById('durVal').textContent=fmt(dur);document.getElementById('durTime').textContent=fmt(dur);/* BPM rough: energy peaks */var data=buf.getChannelData(0),sr=buf.sampleRate,win=Math.floor(sr*.35),peaks=0,prev=0;for(var i=0;i<data.length;i+=win){var e=0;for(var j=i;j<Math.min(i+win,data.length);j+=16)e+=Math.abs(data[j]);if(e>prev*1.25&&e>.4)peaks++;prev=e}var bpm=Math.round(Math.min(130,Math.max(65,peaks/dur*60*.9)));document.getElementById('bpmVal').textContent=bpm+' BPM';/* key rough via chroma energy */document.getElementById('keyVal').textContent=document.getElementById('keySel').value+' minor/major';document.getElementById('moodVal').textContent=bpm<85?'Nhẹ nhàng, da diết':bpm<105?'Trữ tình, ấm áp':'Sôi động, tươi sáng'}
+function handleFile(f){if(!f)return;var url=URL.createObjectURL(f);audio.src=url;document.getElementById('fileInfo').classList.remove('hidden');document.getElementById('trackName').textContent=f.name.replace(/\.[^.]+$/,'');setupGraph();ac().decodeAudioData(f.arrayBuffer().then(function(ab){return ab.slice(0)}).catch(function(){return f.arrayBuffer()})).then(function(buf){drawWave(buf);estimate(buf)}).catch(function(){document.getElementById('bpmVal').textContent='84 BPM'});toast('Đã tải “'+f.name+'” — bấm ▶ để nghe')}
+var fi=document.getElementById('fileInput');
+document.getElementById('pickBtn').onclick=function(e){e.stopPropagation();fi.click()};
+document.getElementById('dropZone').addEventListener('click',function(){fi.click()});
+fi.addEventListener('change',function(){handleFile(fi.files[0])});
+var dz=document.getElementById('dropZone');dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('over')});dz.addEventListener('dragleave',function(){dz.classList.remove('over')});dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('over');handleFile(e.dataTransfer.files[0])});
+document.getElementById('playBtn').onclick=function(){setupGraph();if(audio.paused){if(!audio.src){toast('Hãy tải file lên, hoặc bấm “Nghe giai điệu mẫu” trước nhé');return}audio.play()}else audio.pause()};
+audio.addEventListener('play',function(){document.getElementById('playBtn').textContent='❚❚';document.getElementById('playState').textContent='Đang phát…'});
+audio.addEventListener('pause',function(){document.getElementById('playBtn').textContent='▶';document.getElementById('playState').textContent='Đã dừng'});
+audio.addEventListener('timeupdate',function(){if(audio.duration){document.getElementById('seek').value=audio.currentTime/audio.duration*100;document.getElementById('curTime').textContent=fmt(audio.currentTime)}});
+document.getElementById('seek').addEventListener('input',function(e){if(audio.duration)audio.currentTime=e.target.value/100*audio.duration});
+document.getElementById('speedSel').addEventListener('change',function(e){audio.playbackRate=+e.target.value});
+document.getElementById('volVocal').addEventListener('input',function(e){audio.volume=e.target.value/100});
+document.getElementById('bpmSel').addEventListener('change',function(e){document.getElementById('bpmVal').textContent=e.target.value+' BPM'});
+document.getElementById('keySel').addEventListener('change',function(e){document.getElementById('keyVal').textContent=e.target.value+' minor/major';document.getElementById('scaleKey').value=e.target.value;buildPiano()});
+document.getElementById('demoBtn').onclick=function(e){e.stopPropagation();toast('Giai điệu mẫu: câu gốc → bản bẻ nốt bằng Melisma');playSeq([69,71,72,71,69],.38);setTimeout(function(){playSeq([69,71,72,74,76,74,72,71,69],.24)},2200);document.getElementById('fileInfo').classList.remove('hidden');document.getElementById('trackName').textContent='Giai điệu mẫu (piano tổng hợp)';document.getElementById('bpmVal').textContent='84 BPM';document.getElementById('durVal').textContent='— (mẫu)';};
+
+/* LYRIC LAB */
+var selWordText='lắm',selLineIdx=0,curVar=[],curOrig=[];
+function parseLyrics(){var txt=document.getElementById('lyricInput').value.trim(),lines=txt.split('\n').filter(Boolean),wrap=document.getElementById('lyricLines');wrap.innerHTML='';lines.forEach(function(line,li){var d=document.createElement('div');d.className='lyricLine';line.split(/\s+/).forEach(function(w){var b=document.createElement('button');b.className='word'+(w.replace(/[.,!?]/g,'')===selWordText?' sel':'');b.textContent=w;b.onclick=function(){selWordText=w.replace(/[.,!?]/g,'');selLineIdx=li;document.getElementById('selWord').textContent='“'+selWordText+'”';document.querySelectorAll('.word').forEach(function(x){x.classList.remove('sel')});b.classList.add('sel')};d.appendChild(b)});wrap.appendChild(d)})}
+document.getElementById('parseLyricBtn').onclick=function(){parseLyrics();toast('Đã tách câu — bấm vào từ bạn muốn bẻ nốt')};parseLyrics();
+var lvlTxt={1:'Nhẹ — an toàn, ai cũng hát được',2:'Vừa — dễ hát theo',3:'Đậm — diva mode, khó nhưng chất'};
+document.getElementById('ornLevel').addEventListener('input',function(e){document.getElementById('ornLevelVal').textContent=lvlTxt[e.target.value]});
+function drawContour(notes){var svg=document.getElementById('contour');if(!notes.length){svg.innerHTML='';return}var min=Math.min.apply(null,notes),max=Math.max.apply(null,notes),rng=Math.max(4,max-min);var pts=notes.map(function(n,i){return (30+i*(460/Math.max(1,notes.length-1)))+','+(115-(n-min)/rng*85)});svg.innerHTML='<polyline points="'+pts.join(' ')+'" fill="none" stroke="#FF7A4D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'+notes.map(function(n,i){var p=pts[i].split(',');return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7" fill="#FFD166"/><text x="'+p[0]+'" y="'+(+p[1]-14)+'" fill="#fff" font-size="11" text-anchor="middle" font-weight="bold">'+noteName(n)+'</text>'}).join('')}
+function genVar(silent){var ns=scaleNotes(),bi=Math.floor(ns.length/2),base=ns[bi],tech=document.getElementById('ornTech').value,lvl=+document.getElementById('ornLevel').value;curOrig=[ns[1],ns[2],base,ns[2]];var v;if(tech==='melisma')v=[base].concat(ns.slice(2,2+lvl+2)).concat([base]);else if(tech==='bend')v=[ns[Math.max(0,bi-1)],base,ns[Math.min(ns.length-1,bi+1)],base];else if(tech==='run')v=[base].concat(ns.slice().reverse().slice(0,lvl+3));else if(tech==='octave')v=[base,base,base+12];else if(tech==='falsetto')v=[base,ns[Math.min(ns.length-1,bi+2)],base+12];else v=[base,base,base,ns[Math.min(ns.length-1,bi+1)],base];curVar=v;drawContour(v);document.getElementById('varNotes').innerHTML='Từ <b>“'+selWordText+'”</b> → hát thành: <b>'+v.map(noteName).join(' → ')+'</b><br><span style="color:var(--muted)">Câu gốc: '+curOrig.map(noteName).join(' → ')+' • Chiêu: '+document.getElementById('ornTech').selectedOptions[0].textContent.split('—')[0]+' • Tất cả nốt đều thuộc thang âm đã chọn</span>';if(!silent)toast('Đã sinh biến tấu — bấm “Nghe bản bẻ nốt” để thử')}
+document.getElementById('genVarBtn').onclick=function(){genVar(false)};
+document.getElementById('playOrigBtn').onclick=function(){if(!curOrig.length)genVar(true);playSeq(curOrig,.36);toast('Đang phát câu gốc')};
+document.getElementById('playVarBtn').onclick=function(){if(!curVar.length)genVar(true);playSeq(curVar,.26);toast('Đang phát bản bẻ nốt của bạn ♪')};
+document.getElementById('addVarBtn').onclick=function(){if(!curVar.length)genVar(true);addPlan('Câu '+(selLineIdx+1)+' — từ “'+selWordText+'”: '+curVar.map(noteName).join(' → '))};
+genVar(true);
+
+/* ================= NOTE STUDIO ================= */
+var nsNotes=[],nsPeaks=[],nsDur=0,nsSel={start:0,end:0},nsInst='piano',nsBend=null,nsBentNotes=null,nsClimax=null,nsQuiet=null,nsIsDemo=false,nsPlayTimer=null;
+function $(id){return document.getElementById(id)}
+function nsFmt(s){return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+function autoCorr(buf,sr){var SIZE=buf.length,rms=0;for(var i=0;i<SIZE;i++)rms+=buf[i]*buf[i];rms=Math.sqrt(rms/SIZE);if(rms<0.01)return -1;var r1=0,r2=SIZE-1,th=0.2;for(var i=0;i<SIZE/2;i++)if(Math.abs(buf[i])<th){r1=i;break}for(var i=1;i<SIZE/2;i++)if(Math.abs(buf[SIZE-i])<th){r2=SIZE-i;break}var b=buf.slice(r1,r2),N=b.length,c=new Array(N).fill(0);for(var i=0;i<N;i++)for(var j=0;j<N-i;j++)c[i]+=b[j]*b[j+i];var d=0;while(d<N-1&&c[d]>c[d+1])d++;var maxv=-1,maxp=-1;for(var i=d;i<N;i++)if(c[i]>maxv){maxv=c[i];maxp=i}var T0=maxp;if(T0>0&&T0<N-1){var x1=c[T0-1],x2=c[T0],x3=c[T0+1];var a=(x1+x3-2*x2)/2,bb=(x3-x1)/2;if(a)T0=T0-bb/(2*a)}return sr/T0}
+function transcribe(buf){
+  nsDur=buf.duration;var data=buf.getChannelData(0),sr=buf.sampleRate,hop=Math.floor(sr*0.20),win=2048,notes=[],cur=null;
+  var nCols=520;nsPeaks=[];var per=Math.floor(data.length/nCols);
+  for(var x=0;x<nCols;x++){var mx=0;for(var j=x*per;j<Math.min((x+1)*per,data.length);j+=32){var v=Math.abs(data[j]);if(v>mx)mx=v}nsPeaks.push(mx)}
+  for(var pos=0;pos+win<data.length;pos+=hop){
+    var t=pos/sr,slice=data.subarray(pos,pos+hop),rms=0;for(var i=0;i<slice.length;i+=8)rms+=slice[i]*slice[i];rms=Math.sqrt(rms/(slice.length/8));
+    var midi=null;
+    if(rms>0.018){var f=autoCorr(data.subarray(pos,pos+win),sr);if(f>70&&f<1100){midi=Math.round(69+12*Math.log2(f/440));if(midi<40)midi+=12;if(midi>88)midi-=12}}
+    if(midi!==null&&cur&&cur.midi===midi&&Math.abs(t-(cur.start+cur.dur))<0.25){cur.dur=t+hop/sr-cur.start}
+    else{if(cur)notes.push(cur);cur=midi!==null?{start:t,dur:hop/sr,midi:midi,rms:rms}:null}
+  }
+  if(cur)notes.push(cur);
+  nsNotes=notes.filter(function(n){return n.dur>=0.18});
+  /* climax / quiet by peak energy in 6s windows */
+  var best=-1,bq=1e9,bs=0,qs=0;for(var s=0;s+6<=nsDur;s+=2){var e=0,cnt=0;for(var x2=Math.floor(s/nsDur*520);x2<Math.floor((s+6)/nsDur*520);x2++){e+=nsPeaks[x2]||0;cnt++}e/=Math.max(1,cnt);if(e>best){best=e;bs=s}if(e<bq){bq=e;qs=s}}
+  nsClimax={start:bs,end:Math.min(nsDur,bs+8)};nsQuiet={start:qs,end:Math.min(nsDur,qs+8)};
+  nsSel={start:nsClimax.start,end:nsClimax.end};
+}
+function makeDemoNS(){
+  nsIsDemo=true;nsDur=24;nsPeaks=[];for(var x=0;x<520;x++){nsPeaks.push(0.25+0.55*Math.abs(Math.sin(x*0.05))*(x>300&&x<430?1.25:0.8))}
+  var mel=[69,71,72,71,69,67,69,72,74,72,71,69,67,64,67,69,72,76,74,72,71,69];nsNotes=[];
+  var t=0;mel.forEach(function(m,i){var d=(i===10||i===21)?1.6:0.85;nsNotes.push({start:t,dur:d,midi:m,rms:0.5});t+=d});
+  nsClimax={start:13,end:20};nsQuiet={start:0,end:6};nsSel={start:13,end:20};
+  showNS('Bài mẫu tổng hợp — 22 nốt đã được tạo sẵn để bạn thử mọi tính năng');
+}
+function showNS(status){
+  $('nsEmpty').classList.add('hidden');$('nsMain').classList.remove('hidden');
+  $('nsStatus').textContent=status||('Đã tách được '+nsNotes.length+' nốt trong '+nsFmt(nsDur));
+  drawBigWave();updateSelUI();
+}
+function selNotes(){return nsNotes.filter(function(n){return n.start>=nsSel.start-0.01&&n.start<nsSel.end})}
+function drawBigWave(){
+  var cv=$('bigWave');if(!cv||!nsPeaks.length)return;var ctx=cv.getContext('2d'),W=cv.width,H=cv.height;ctx.fillStyle='#17110B';ctx.fillRect(0,0,W,H);
+  function reg(seg,color){if(!seg)return;ctx.fillStyle=color;ctx.fillRect(seg.start/nsDur*W,0,(seg.end-seg.start)/nsDur*W,H)}
+  reg(nsQuiet,'rgba(14,124,107,.35)');reg(nsClimax,'rgba(255,209,102,.28)');
+  ctx.fillStyle='rgba(232,85,47,.38)';ctx.fillRect(nsSel.start/nsDur*W,0,(nsSel.end-nsSel.start)/nsDur*W,H);
+  for(var x=0;x<W;x++){var p=nsPeaks[Math.floor(x/W*nsPeaks.length)]||0;var inSel=x>=nsSel.start/nsDur*W&&x<=nsSel.end/nsDur*W;ctx.fillStyle=inSel?'#FFB199':'#8A7A66';var h=Math.max(2,p*H*0.92);ctx.fillRect(x,(H-h)/2,1,h)}
+  ctx.strokeStyle='#E8552F';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(nsSel.start/nsDur*W,0);ctx.lineTo(nsSel.start/nsDur*W,H);ctx.moveTo(nsSel.end/nsDur*W,0);ctx.lineTo(nsSel.end/nsDur*W,H);ctx.stroke();
+  ctx.fillStyle='#fff';ctx.font='bold 12px sans-serif';ctx.fillText(nsFmt(nsSel.start),nsSel.start/nsDur*W+6,16);ctx.fillText(nsFmt(nsSel.end),Math.max(0,nsSel.end/nsDur*W-36),16);
+  drawRoll();
+}
+function drawRoll(){
+  var cv=$('roll');if(!cv)return;var ctx=cv.getContext('2d'),W=cv.width,H=cv.height;ctx.fillStyle='#17110B';ctx.fillRect(0,0,W,H);
+  var notes=selNotes();if(!notes.length){ctx.fillStyle='#fff';ctx.font='16px sans-serif';ctx.fillText('Đoạn này chưa có nốt nào — hãy kéo chọn đoạn khác',30,H/2);$('nsNoteList').textContent='—';return}
+  var list=nsBentNotes||notes;
+  var all=notes.concat(list),min=Math.min.apply(null,all.map(function(n){return n.midi}))-2,max=Math.max.apply(null,all.map(function(n){return n.midi}))+2,rng=Math.max(6,max-min);
+  var dur=Math.max(1,nsSel.end-nsSel.start);
+  ctx.strokeStyle='rgba(255,255,255,.12)';ctx.fillStyle='rgba(255,255,255,.65)';ctx.font='11px sans-serif';
+  for(var m=min;m<=max;m+=2){var y=H-((m-min)/rng)*H;ctx.beginPath();ctx.moveTo(44,y);ctx.lineTo(W,y);ctx.stroke();ctx.fillText(noteName(m),6,y+4)}
+  function drawSet(arr,fill,dy){arr.forEach(function(n){var x=44+(n.start-nsSel.start)/dur*(W-56),w=Math.max(14,n.dur/dur*(W-56)),y=H-((n.midi-min)/rng)*H+dy;var hh=Math.max(13,H/rng-4);ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y-hh/2,w,hh,7);ctx.fill();if(w>30){ctx.fillStyle='#17110B';ctx.font='bold 11px sans-serif';ctx.fillText(noteName(n.midi),x+6,y+4)}})}
+  if(nsBentNotes){drawSet(notes,'rgba(255,255,255,.45)',10);drawSet(list,'#FF7A4D',-10)}
+  else drawSet(notes,'#FFD166',0);
+  $('nsNoteList').innerHTML=(nsBentNotes?'<b style="color:var(--coral)">Bản đã bẻ nốt:</b> ':'<b>Giai điệu gốc:</b> ')+list.map(function(n){return noteName(n.midi)}).join(' → ');
+}
+function nsStats(){
+  var notes=selNotes();if(!notes.length)return null;
+  var midis=notes.map(function(n){return n.midi}),longest=notes.reduce(function(a,b){return b.dur>a.dur?b:a},notes[0]);
+  var rep=0;for(var i=1;i<midis.length;i++)if(midis[i]===midis[i-1])rep++;
+  return {count:notes.length,min:Math.min.apply(null,midis),max:Math.max.apply(null,midis),longest:longest,range:Math.max.apply(null,midis)-Math.min.apply(null,midis),rep:rep,density:notes.length/Math.max(1,nsSel.end-nsSel.start),isClimax:nsClimax&&nsSel.start>=nsClimax.start-1&&nsSel.start<nsClimax.end,isQuiet:nsQuiet&&nsSel.start>=nsQuiet.start-1&&nsSel.start<nsQuiet.end};
+}
+function updateSelUI(){
+  var st=nsStats();$('selRange').textContent=nsFmt(nsSel.start)+' → '+nsFmt(nsSel.end);$('selDur').textContent='Dài '+((nsSel.end-nsSel.start).toFixed(1))+' giây — kéo trên sóng để đổi';
+  if(!st){$('selNotes').textContent='0';$('selRangeNote').textContent='—';$('selScore').textContent='—';$('advGrid').innerHTML='';return}
+  $('selNotes').textContent=st.count+' nốt';$('selRangeNote').textContent=noteName(st.min)+' → '+noteName(st.max);
+  var score=Math.min(98,Math.round(35+st.longest.dur*22+st.range*2.2+(st.isClimax?18:0)));
+  $('selScore').textContent=score+'/100'+(score>=75?' 🔥 Rất đáng bẻ':score>=55?' — Khá tốt':' — Hát gần gốc sẽ hợp hơn');
+  renderAdvice(st,score);drawRoll();
+}
+function renderAdvice(st,score){
+  var cand=[
+   {id:'melisma',icon:'〰️',name:'Luyến láy Melisma',pts:st.longest.dur>=0.6?38:8,why:'Nốt dài nhất trong đoạn là <b>'+noteName(st.longest.midi)+'</b> giữ tới <b>'+st.longest.dur.toFixed(1)+' giây</b> — khoảng trống hoàn hảo để kéo 1 từ thành 4–6 nốt thay vì hát thẳng.'},
+   {id:'vibrato',icon:'💧',name:'Vibrato ở nốt cuối',pts:st.longest.dur>=0.6?34:10,why:'Đoạn có nốt giữ lâu — chỉ cần rung nhẹ ở nửa sau của nốt là câu hát lập tức đầy cảm xúc, dễ làm và ít rủi ro nhất.'},
+   {id:'run',icon:'⚡',name:'Riff & Run cuối đoạn',pts:st.density>0.9?36:st.count>=6?24:8,why:'Đoạn có <b>'+st.count+' nốt</b> trong '+((nsSel.end-nsSel.start).toFixed(0))+' giây — mật độ đủ dày để chạy một chùm nốt nhanh ở cuối mà không bị rối.'},
+   {id:'octave',icon:'🚀',name:'Nhảy quãng 8 ở nốt cao nhất',pts:st.isClimax?36:14,why:'Nốt cao nhất đoạn là <b>'+noteName(st.max)+'</b>'+(st.isClimax?' và đoạn này nằm ngay vùng cao trào (to nhất bài)':'')+' — bật nốt này lên 1 quãng 8 sẽ tạo cú nổ mà khán giả nhớ nhất.'},
+   {id:'falsetto',icon:'🕊️',name:'Lật falsetto ở nốt cao',pts:st.isQuiet?36:16,why:(st.isQuiet?'Đây là đoạn yên của bài — ':'')+'Thay vì gồng lên nốt <b>'+noteName(st.max)+'</b>, lật sang giọng gió sẽ mong manh và rất riêng.'},
+   {id:'bend',icon:'↗️',name:'Bẻ nốt / trượt nốt',pts:st.rep>=2?34:15,why:'Đoạn có <b>'+st.rep+' chỗ lặp lại cùng một nốt</b> — trượt lên/xuống nửa cung trước khi vào nốt sẽ phá sự đơn điệu ngay lập tức.'}
+  ];
+  cand.sort(function(a,b){return b.pts-a.pts});var top=cand.slice(0,3);
+  if(!nsBend)nsBend=top[0].id;
+  $('advGrid').innerHTML='';
+  top.forEach(function(c,i){var d=document.createElement('div');d.className='adv'+(i===0?' best':'');d.innerHTML='<div style="display:flex;justify-content:space-between;align-items:start"><span style="font-size:28px">'+c.icon+'</span><span class="score">'+c.pts+'<small style="font-size:13px;color:var(--muted)">/40 điểm hợp</small></span></div><h3 style="margin:8px 0 6px">'+(i===0?'⭐ Hợp nhất — ':'')+c.name+'</h3><p style="color:var(--muted);font-size:13.5px;margin:0 0 12px">'+c.why+'</p><button class="btn '+(nsBend===c.id?'btn-coral':'btn-ghost')+'" style="width:100%">'+(nsBend===c.id?'✓ Đang áp dụng — nghe nút C bên trên':'Áp dụng & vẽ lại nốt')+'</button>';d.querySelector('button').onclick=function(){applyBend(c.id);renderAdvice(nsStats(),score)};$('advGrid').appendChild(d)});
+}
+function applyBend(id){
+  nsBend=id;var notes=selNotes().map(function(n){return {start:n.start,dur:n.dur,midi:n.midi}});if(!notes.length)return;
+  var scale=scaleNotes();
+  function nearestScale(m){var best=scale[0],bd=99;scale.forEach(function(s){var pc=s%12,mm=m-(m%12)+pc;if(mm<m-6)mm+=12;if(Math.abs(mm-m)<bd){bd=Math.abs(mm-m);best=mm}});return best}
+  if(id==='melisma'){var li=0;notes.forEach(function(n,i){if(n.dur>notes[li].dur)li=i});var L=notes[li],base=nearestScale(L.midi),steps=[0,2,4,2,0].map(function(o){return nearestScale(base+o)});var seg=steps.map(function(m,i){return {start:L.start+L.dur*i/steps.length,dur:L.dur/steps.length,midi:m}});notes.splice.apply(notes,[li,1].concat(seg))}
+  else if(id==='run'){var last=notes[notes.length-1],base=nearestScale(last.midi),steps=[4,2,0,-2].map(function(o){return nearestScale(base+o)});var seg=steps.map(function(m,i){return {start:last.start+last.dur*i/(steps.length+1),dur:last.dur/(steps.length+1),midi:m}});seg.push({start:last.start+last.dur*steps.length/(steps.length+1),dur:last.dur/(steps.length+1),midi:last.midi});notes.splice.apply(notes,[notes.length-1,1].concat(seg))}
+  else if(id==='octave'){var mx=Math.max.apply(null,notes.map(function(n){return n.midi}));notes.forEach(function(n){if(n.midi===mx)n.midi+=12})}
+  else if(id==='falsetto'){var last2=notes[notes.length-1];last2.midi+=12}
+  else if(id==='bend'){var out=[];notes.forEach(function(n){if(n.dur>=0.5){out.push({start:n.start,dur:n.dur*0.3,midi:nearestScale(n.midi-2)});out.push({start:n.start+n.dur*0.3,dur:n.dur*0.7,midi:n.midi})}else out.push(n)});notes=out}
+  nsBentNotes=notes;drawBigWave();toast('Đã bẻ nốt — ô cam trên piano-roll là giai điệu mới. Bấm C để nghe!');
+  document.querySelectorAll('.nsStep').forEach(function(s){s.classList.toggle('active',s.dataset.nsstep==='4')});
+}
+/* --- instrument synth --- */
+function instTone(midi,t,dur,inst,vibrato){
+  var c=ac(),o=c.createOscillator(),o2=c.createOscillator(),g=c.createGain(),f=c.createBiquadFilter();f.type='lowpass';var fq=freq(midi);
+  var peak=0.30,att=0.02,dec=dur;
+  if(inst==='piano'){o.type='triangle';o2.type='sine';o.frequency.value=fq;o2.frequency.value=fq*2;f.frequency.value=3800}
+  else if(inst==='guitar'){o.type='sawtooth';o2.type='triangle';o.frequency.value=fq;o2.frequency.value=fq;f.frequency.value=1700;peak=0.22;dec=Math.min(dur,0.9)}
+  else if(inst==='violin'){o.type='sawtooth';o2.type='sawtooth';o.frequency.value=fq;o2.frequency.value=fq*1.003;f.frequency.value=2600;att=0.09;peak=0.18}
+  else if(inst==='flute'){o.type='sine';o2.type='sine';o.frequency.value=fq;o2.frequency.value=fq*2;f.frequency.value=3000;att=0.06;peak=0.26}
+  else{o.type='sine';o2.type='sine';o.frequency.value=fq;o2.frequency.value=fq*3;f.frequency.value=5000;peak=0.24;dec=Math.min(dur,0.7)}
+  if(inst==='violin'||inst==='flute'||vibrato){var lfo=c.createOscillator(),lg=c.createGain();lfo.frequency.value=5.4;lg.gain.value=fq*0.012;lfo.connect(lg);lg.connect(o.frequency);lg.connect(o2.frequency);lfo.start(t+0.12);lfo.stop(t+dur+0.1)}
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(peak,t+att);if(inst==='violin'||inst==='flute'){g.gain.setValueAtTime(peak*0.85,t+Math.max(att,dur-0.12));g.gain.linearRampToValueAtTime(0.001,t+dur)}else{g.gain.exponentialRampToValueAtTime(0.001,t+dec)}
+  o.connect(f);o2.connect(f);f.connect(g);g.connect(c.destination);o.start(t);o2.start(t);o.stop(t+dur+0.1);o2.stop(t+dur+0.1);
+}
+function playNoteList(list,inst,useVibrato,label){
+  if(!list||!list.length){toast('Hãy chọn đoạn có nốt trước nhé');return}
+  var c=ac(),t0=c.currentTime+0.08,base=list[0].start,total=0;
+  list.forEach(function(n){var rel=n.start-base;total=Math.max(total,rel+n.dur);instTone(n.midi,t0+rel,Math.max(0.22,n.dur),inst,useVibrato)});
+  toast(label+' ('+total.toFixed(1)+' giây) ♪');
+  var st=Date.now();clearInterval(nsPlayTimer);nsPlayTimer=setInterval(function(){var p=(Date.now()-st)/(total*1000);$('nsProg').style.width=Math.min(100,p*100)+'%';if(p>=1){clearInterval(nsPlayTimer);$('nsProg').style.width='0'}},100);
+}
+/* --- wiring --- */
+$('instGrid').addEventListener('click',function(e){var b=e.target.closest('[data-inst]');if(!b)return;document.querySelectorAll('[data-inst]').forEach(function(x){x.classList.remove('active')});b.classList.add('active');nsInst=b.dataset.inst;var n=selNotes()[0];if(n)instTone(n.midi,ac().currentTime+0.03,0.6,nsInst,false);toast('Đã chọn nhạc cụ: '+b.textContent.trim())});
+$('segChips').addEventListener('click',function(e){var b=e.target.closest('[data-seg]');if(!b||!nsDur)return;document.querySelectorAll('[data-seg]').forEach(function(x){x.classList.remove('active')});b.classList.add('active');nsBentNotes=null;
+  if(b.dataset.seg==='all')nsSel={start:0,end:nsDur};else if(b.dataset.seg==='climax')nsSel={start:nsClimax.start,end:nsClimax.end};else if(b.dataset.seg==='quiet')nsSel={start:nsQuiet.start,end:nsQuiet.end};else if(b.dataset.seg==='first')nsSel={start:0,end:Math.min(10,nsDur)};else nsSel={start:Math.max(0,nsDur-10),end:nsDur};
+  drawBigWave();updateSelUI();toast('Đã chọn đoạn '+nsFmt(nsSel.start)+' → '+nsFmt(nsSel.end))});
+(function(){var cv=$('bigWave'),drag=null;
+  function toTime(ev){var r=cv.getBoundingClientRect();var x=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;return Math.max(0,Math.min(nsDur,x/r.width*nsDur))}
+  function down(ev){if(!nsDur)return;drag=toTime(ev);nsSel={start:drag,end:drag};nsBentNotes=null;drawBigWave()}
+  function move(ev){if(drag===null||!nsDur)return;var t=toTime(ev);nsSel={start:Math.min(drag,t),end:Math.max(drag,t)};drawBigWave()}
+  function up(){if(drag===null)return;drag=null;if(nsSel.end-nsSel.start<1){nsSel.end=Math.min(nsDur,nsSel.start+3)}drawBigWave();updateSelUI();document.querySelectorAll('.nsStep').forEach(function(s){s.classList.toggle('active',s.dataset.nsstep==='2')});toast('Đã khoanh đoạn '+nsFmt(nsSel.start)+' → '+nsFmt(nsSel.end)+' — xem nốt & tư vấn bên dưới')}
+  cv.addEventListener('pointerdown',down);cv.addEventListener('pointermove',move);window.addEventListener('pointerup',up);
+})();
+$('roll').addEventListener('click',function(ev){var notes=nsBentNotes||selNotes();if(!notes.length)return;var cv=$('roll'),r=cv.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width*cv.width;var dur=Math.max(1,nsSel.end-nsSel.start);var t=nsSel.start+(x-44)/(cv.width-56)*dur;var hit=notes.filter(function(n){return t>=n.start&&t<=n.start+n.dur})[0];if(hit){instTone(hit.midi,ac().currentTime+0.03,0.7,nsInst,nsBend==='vibrato');toast('Nốt '+noteName(hit.midi)+' — giữ '+hit.dur.toFixed(1)+' giây')}});
+$('playInstBtn').onclick=function(){nsBentNotes=null;drawBigWave();playNoteList(selNotes(),nsInst,false,'🎹 Nhạc cụ đang phát lại giai điệu GỐC')};
+$('playBentBtn').onclick=function(){if(!nsBentNotes)applyBend(nsBend||'melisma');playNoteList(nsBentNotes,nsInst,nsBend==='vibrato','✨ Bản ĐÃ BẺ NỐT bằng '+nsInst)};
+$('playOrigSegBtn').onclick=function(){
+  if(!nsIsDemo&&audio.src&&audio.duration){setupGraph();audio.currentTime=nsSel.start;audio.play();toast('▶ Đang phát đoạn gốc '+nsFmt(nsSel.start)+' → '+nsFmt(nsSel.end));var iv=setInterval(function(){if(audio.currentTime>=nsSel.end||audio.paused){audio.pause();clearInterval(iv)}},200)}
+  else{playNoteList(selNotes(),'flute',true,'▶ Bản gốc (mẫu) — phát bằng tiếng sáo có rung giọng')}
+};
+$('nsResetBendBtn').onclick=function(){nsBentNotes=null;nsBend=null;drawBigWave();updateSelUI();toast('Đã trở về giai điệu gốc')};
+$('nsAddPlanBtn').onclick=function(){var st=nsStats();if(!st){toast('Hãy chọn đoạn có nốt trước');return}var names={melisma:'Luyến láy Melisma',vibrato:'Vibrato',run:'Riff & Run',octave:'Nhảy quãng 8',falsetto:'Lật falsetto',bend:'Bẻ / trượt nốt'};addPlan('Đoạn '+nsFmt(nsSel.start)+'–'+nsFmt(nsSel.end)+' ('+noteName(st.min)+'→'+noteName(st.max)+') — '+(names[nsBend]||'Bẻ nốt')+' • Nghe lại bằng '+nsInst+': '+(nsBentNotes||selNotes()).map(function(n){return noteName(n.midi)}).join(' → '))};
+$('nsDemoBtn').onclick=function(){makeDemoNS();toast('Đã tạo bài mẫu — hãy kéo chọn đoạn trên sóng âm!')};
+document.querySelectorAll('.nsStep').forEach(function(s){s.addEventListener('click',function(){document.querySelectorAll('.nsStep').forEach(function(x){x.classList.remove('active')});s.classList.add('active');$('noteStudio').scrollIntoView({behavior:'smooth'})})});
+/* hook real file uploads (second listener — original handler untouched) */
+fi.addEventListener('change',function(){var f=fi.files[0];if(!f)return;nsIsDemo=false;$('nsEmpty').classList.remove('hidden');$('nsMain').classList.add('hidden');$('nsEmpty').querySelector('strong').textContent='⏳ Đang chuyển bài hát thành nốt nhạc… (bài dài có thể mất 10–30 giây)';
+  f.arrayBuffer().then(function(ab){return ac().decodeAudioData(ab.slice(0))}).then(function(buf){setTimeout(function(){try{transcribe(buf);showNS('✓ Đã tách được '+nsNotes.length+' nốt từ “'+f.name+'” — kéo trên sóng để chọn đoạn')}catch(e){$('nsEmpty').querySelector('strong').textContent='Chưa tách được nốt từ file này — hãy thử “Tạo bài mẫu” để xem tính năng'}},50)}).catch(function(){$('nsEmpty').querySelector('strong').textContent='Chưa đọc được file này — hãy thử file MP3/WAV khác, hoặc dùng bài mẫu'})});
+</script>
+</body>
+</html>

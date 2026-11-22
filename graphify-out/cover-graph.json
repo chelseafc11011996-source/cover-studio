@@ -1,0 +1,1210 @@
+{
+  "nodes": [
+    {
+      "id": "fn:freq",
+      "label": "freq()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:noteName",
+      "label": "noteName()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:ac",
+      "label": "ac()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:playTone",
+      "label": "playTone()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:playSeq",
+      "label": "playSeq()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:toast",
+      "label": "toast()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:renderPlan",
+      "label": "renderPlan()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:addPlan",
+      "label": "addPlan()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:rootMidi",
+      "label": "rootMidi()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:buildPiano",
+      "label": "buildPiano()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:scaleNotes",
+      "label": "scaleNotes()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:genRun",
+      "label": "genRun()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:setupGraph",
+      "label": "setupGraph()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:setMode",
+      "label": "setMode()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:fmt",
+      "label": "fmt()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:drawWave",
+      "label": "drawWave()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:estimate",
+      "label": "estimate()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:handleFile",
+      "label": "handleFile()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:parseLyrics",
+      "label": "parseLyrics()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:drawContour",
+      "label": "drawContour()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:genVar",
+      "label": "genVar()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:$",
+      "label": "$()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:nsFmt",
+      "label": "nsFmt()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:autoCorr",
+      "label": "autoCorr()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:transcribe",
+      "label": "transcribe()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:makeDemoNS",
+      "label": "makeDemoNS()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:showNS",
+      "label": "showNS()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:selNotes",
+      "label": "selNotes()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:drawBigWave",
+      "label": "drawBigWave()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:reg",
+      "label": "reg()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:drawRoll",
+      "label": "drawRoll()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:drawSet",
+      "label": "drawSet()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:nsStats",
+      "label": "nsStats()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:updateSelUI",
+      "label": "updateSelUI()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:renderAdvice",
+      "label": "renderAdvice()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:applyBend",
+      "label": "applyBend()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:nearestScale",
+      "label": "nearestScale()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:instTone",
+      "label": "instTone()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:playNoteList",
+      "label": "playNoteList()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:toTime",
+      "label": "toTime()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:down",
+      "label": "down()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:move",
+      "label": "move()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:up",
+      "label": "up()",
+      "kind": "function"
+    },
+    {
+      "id": "tech:Luyến láy — Melisma",
+      "label": "Luyến láy — Melisma",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Bẻ nốt cuối câu",
+      "label": "Bẻ nốt cuối câu",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Riff & Run nhanh",
+      "label": "Riff & Run nhanh",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Vibrato — Rung nốt",
+      "label": "Vibrato — Rung nốt",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Lật giọng gió — Falsetto Flip",
+      "label": "Lật giọng gió — Falsetto Flip",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Nhảy quãng 8",
+      "label": "Nhảy quãng 8",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Hát lệch phách",
+      "label": "Hát lệch phách",
+      "kind": "technique"
+    },
+    {
+      "id": "tech:Ad-lib cuối bài",
+      "label": "Ad-lib cuối bài",
+      "kind": "technique"
+    },
+    {
+      "id": "bend:melisma",
+      "label": "melisma",
+      "kind": "bend"
+    },
+    {
+      "id": "bend:vibrato",
+      "label": "vibrato",
+      "kind": "bend"
+    },
+    {
+      "id": "bend:run",
+      "label": "run",
+      "kind": "bend"
+    },
+    {
+      "id": "bend:octave",
+      "label": "octave",
+      "kind": "bend"
+    },
+    {
+      "id": "bend:falsetto",
+      "label": "falsetto",
+      "kind": "bend"
+    },
+    {
+      "id": "bend:bend",
+      "label": "bend",
+      "kind": "bend"
+    },
+    {
+      "id": "scale:pentMinor",
+      "label": "Minor Pentatonic",
+      "kind": "scale"
+    },
+    {
+      "id": "scale:pentMajor",
+      "label": "Major Pentatonic",
+      "kind": "scale"
+    },
+    {
+      "id": "scale:blues",
+      "label": "Blues",
+      "kind": "scale"
+    },
+    {
+      "id": "scale:dorian",
+      "label": "Dorian",
+      "kind": "scale"
+    },
+    {
+      "id": "scale:major",
+      "label": "Major",
+      "kind": "scale"
+    },
+    {
+      "id": "scale:minor",
+      "label": "Natural Minor",
+      "kind": "scale"
+    },
+    {
+      "id": "inst:flute",
+      "label": "Sáo / Flute",
+      "kind": "instrument"
+    },
+    {
+      "id": "inst:guitar",
+      "label": "Guitar",
+      "kind": "instrument"
+    },
+    {
+      "id": "inst:piano",
+      "label": "Piano",
+      "kind": "instrument"
+    },
+    {
+      "id": "inst:violin",
+      "label": "Violin",
+      "kind": "instrument"
+    },
+    {
+      "id": "inst:box",
+      "label": "Hộp nhạc",
+      "kind": "instrument"
+    },
+    {
+      "id": "style:R&B Luyến Láy",
+      "label": "R&B Luyến Láy",
+      "kind": "style"
+    },
+    {
+      "id": "style:Ballad Mộc",
+      "label": "Ballad Mộc",
+      "kind": "style"
+    },
+    {
+      "id": "style:Indie Ngẫu Hứng",
+      "label": "Indie Ngẫu Hứng",
+      "kind": "style"
+    },
+    {
+      "id": "style:Jazz / Soul",
+      "label": "Jazz / Soul",
+      "kind": "style"
+    },
+    {
+      "id": "style:Pop Bùng Nổ",
+      "label": "Pop Bùng Nổ",
+      "kind": "style"
+    },
+    {
+      "id": "section:🎵 1. Tải bài hát gốc lên",
+      "label": "🎵 1. Tải bài hát gốc lên",
+      "kind": "section"
+    },
+    {
+      "id": "section:🔍 2. “Giải phẫu” bài gốc",
+      "label": "🔍 2. “Giải phẫu” bài gốc",
+      "kind": "section"
+    },
+    {
+      "id": "section:Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼",
+      "label": "Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼",
+      "kind": "section"
+    },
+    {
+      "id": "section:Bạn muốn người nghe nhớ mình là ai?",
+      "label": "Bạn muốn người nghe nhớ mình là ai?",
+      "kind": "section"
+    },
+    {
+      "id": "section:Phòng lab luyến láy",
+      "label": "Phòng lab luyến láy",
+      "kind": "section"
+    },
+    {
+      "id": "section:Thang âm — “bảng màu” để bạn tự sáng tạo",
+      "label": "Thang âm — “bảng màu” để bạn tự sáng tạo",
+      "kind": "section"
+    },
+    {
+      "id": "section:Xưởng bẻ câu hát — làm trên chính lời bài của bạn",
+      "label": "Xưởng bẻ câu hát — làm trên chính lời bài của bạn",
+      "kind": "section"
+    },
+    {
+      "id": "section:Bản đồ cover độc bản của bạn",
+      "label": "Bản đồ cover độc bản của bạn",
+      "kind": "section"
+    }
+  ],
+  "edges": [
+    {
+      "source": "fn:playTone",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playTone",
+      "target": "fn:freq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playSeq",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playSeq",
+      "target": "fn:playTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:toast",
+      "target": "fn:addPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:toast",
+      "target": "fn:playSeq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:addPlan",
+      "target": "fn:renderPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:addPlan",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildPiano",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildPiano",
+      "target": "fn:genRun",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildPiano",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildPiano",
+      "target": "fn:playTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildPiano",
+      "target": "fn:rootMidi",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "fn:rootMidi",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genRun",
+      "target": "fn:addPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genRun",
+      "target": "fn:buildPiano",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genRun",
+      "target": "fn:playSeq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genRun",
+      "target": "fn:scaleNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genRun",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setupGraph",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setMode",
+      "target": "fn:setupGraph",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setMode",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:estimate",
+      "target": "fn:fmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:buildPiano",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:drawWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:estimate",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:fmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:playSeq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:setupGraph",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:handleFile",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:parseLyrics",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:drawContour",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genVar",
+      "target": "fn:addPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genVar",
+      "target": "fn:drawContour",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genVar",
+      "target": "fn:playSeq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genVar",
+      "target": "fn:scaleNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genVar",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:transcribe",
+      "target": "fn:autoCorr",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:makeDemoNS",
+      "target": "fn:showNS",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:showNS",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:showNS",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:showNS",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:reg",
+      "target": "fn:drawRoll",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:reg",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:drawRoll",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:drawRoll",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:drawSet",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:nsStats",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateSelUI",
+      "target": "fn:drawRoll",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateSelUI",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateSelUI",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateSelUI",
+      "target": "fn:nsStats",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateSelUI",
+      "target": "fn:renderAdvice",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "fn:applyBend",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "fn:nsStats",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "fn:scaleNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:nearestScale",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:nearestScale",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "fn:freq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:instTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:down",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:down",
+      "target": "fn:toTime",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:move",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:move",
+      "target": "fn:toTime",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:addPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:applyBend",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:instTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:makeDemoNS",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:nsStats",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:playNoteList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:setupGraph",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:showNS",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:transcribe",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:up",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "bend:melisma",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "bend:melisma",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "bend:vibrato",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "bend:vibrato",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "bend:run",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "bend:run",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "bend:octave",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "bend:octave",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "bend:falsetto",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "bend:falsetto",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyBend",
+      "target": "bend:bend",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderAdvice",
+      "target": "bend:bend",
+      "relation": "OFFERS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "scale:pentMinor",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "scale:pentMajor",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "scale:blues",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "scale:dorian",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "scale:major",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
+      "target": "scale:minor",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "inst:flute",
+      "relation": "PLAYS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "inst:guitar",
+      "relation": "PLAYS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "inst:piano",
+      "relation": "PLAYS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "inst:violin",
+      "relation": "PLAYS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:instTone",
+      "target": "inst:box",
+      "relation": "PLAYS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    }
+  ],
+  "meta": {
+    "source": "code/app.js + index.html",
+    "extraction": "deterministic, no LLM",
+    "counts": {
+      "nodes": 81,
+      "edges": 113
+    }
+  }
+}
