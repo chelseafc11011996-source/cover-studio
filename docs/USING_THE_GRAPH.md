@@ -2,7 +2,7 @@
 
 ## Graph chính thức (Graphify, AST)
 
-`graphify-out/graph.json` — 43 node, 107 edge, 7 community.
+`graphify-out/graph.json` — 80 node, 227 edge, 8 community.
 Build lại:
 
 ```bash
@@ -19,25 +19,25 @@ Tra cứu:
 ~/workspace/.graphify-venv/bin/graphify affected "noteName" --graph graphify-out/graph.json
 ```
 
-Nút trung tâm (nhiều edge nhất): `drawBigWave()` (9), `noteName()` (9),
-`updateSelUI()` (8), `ac()` (8), `toast()` (8), `applyBend()` (7),
-`renderAdvice()` (7). Sửa một nút trong số này thì tra `affected`
+Nút trung tâm (nhiều edge nhất): `noteName()` (22), `toast()` (16),
+`updateSelUI()` (12), `ac()` (12), `drawBigWave()` (11), `singTest()` (10),
+`selNotes()` (10). Sửa một nút trong số này thì tra `affected`
 trước khi sửa hàng loạt.
 
 Mở `graphify-out/graph.html` trong trình duyệt để xem graph trực quan.
 
 ## Graph tính năng (xác định, tự build)
 
-`graphify-out/cover-graph.json` — 81 node, 113 edge. Build lại:
+`graphify-out/cover-graph.json` — 122 node, 229 edge. Build lại:
 
 ```bash
 python3 tools/build-cover-graph.py
 ```
 
-Loại node: `function` (43), `technique` (8 kỹ thuật lab),
-`section` (8 mục), `bend` (6 chiêu tư vấn), `scale` (6 thang âm),
+Loại node: `function` (82), `technique` (8 kỹ thuật lab),
+`section` (9 mục), `bend` (6 chiêu tư vấn), `scale` (7 thang âm),
 `instrument` (5 nhạc cụ), `style` (5 phong cách).
-Loại edge: `CALLS` (90, hàm gọi hàm), `OFFERS` (12,
+Loại edge: `CALLS` (205, hàm gọi hàm), `OFFERS` (12,
 `applyBend`/`renderAdvice` → chiêu bẻ), `USES_SCALE` (6),
 `PLAYS` (5, `instTone` → nhạc cụ). Tất cả đều `EXTRACTED`.
 

@@ -31,6 +31,11 @@
       "kind": "function"
     },
     {
+      "id": "fn:saveState",
+      "label": "saveState()",
+      "kind": "function"
+    },
+    {
       "id": "fn:renderPlan",
       "label": "renderPlan()",
       "kind": "function"
@@ -86,8 +91,28 @@
       "kind": "function"
     },
     {
-      "id": "fn:handleFile",
-      "label": "handleFile()",
+      "id": "fn:estimateKey",
+      "label": "estimateKey()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:pear",
+      "label": "pear()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:setFileProg",
+      "label": "setFileProg()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:onFile",
+      "label": "onFile()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:setPracticeSpeed",
+      "label": "setPracticeSpeed()",
       "kind": "function"
     },
     {
@@ -113,6 +138,11 @@
     {
       "id": "fn:nsFmt",
       "label": "nsFmt()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:autoCorrFull",
+      "label": "autoCorrFull()",
       "kind": "function"
     },
     {
@@ -176,6 +206,11 @@
       "kind": "function"
     },
     {
+      "id": "fn:d1",
+      "label": "d1()",
+      "kind": "function"
+    },
+    {
       "id": "fn:applyBend",
       "label": "applyBend()",
       "kind": "function"
@@ -213,6 +248,166 @@
     {
       "id": "fn:up",
       "label": "up()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:activeEditList",
+      "label": "activeEditList()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:confTxt",
+      "label": "confTxt()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:updateNoteEditInfo",
+      "label": "updateNoteEditInfo()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:afterNoteEdit",
+      "label": "afterNoteEdit()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:needSelNote",
+      "label": "needSelNote()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:noteHomeArray",
+      "label": "noteHomeArray()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:setNsStep",
+      "label": "setNsStep()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:effRange",
+      "label": "effRange()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:medianOf",
+      "label": "medianOf()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:fillVoiceSelects",
+      "label": "fillVoiceSelects()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:buildMiniPiano",
+      "label": "buildMiniPiano()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:renderVoiceResult",
+      "label": "renderVoiceResult()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:setVoiceRange",
+      "label": "setVoiceRange()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:capturePitch",
+      "label": "capturePitch()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:live",
+      "label": "live()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:fail",
+      "label": "fail()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:countOut",
+      "label": "countOut()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:bestShift",
+      "label": "bestShift()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:updateTransposeUI",
+      "label": "updateTransposeUI()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:applyTranspose",
+      "label": "applyTranspose()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:bumpPractice",
+      "label": "bumpPractice()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:practicePlay",
+      "label": "practicePlay()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:once",
+      "label": "once()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:noteByNote",
+      "label": "noteByNote()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:step",
+      "label": "step()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:showSingMsg",
+      "label": "showSingMsg()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:recordUserPitch",
+      "label": "recordUserPitch()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:drawCompare",
+      "label": "drawCompare()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:X",
+      "label": "X()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:Y",
+      "label": "Y()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:singTest",
+      "label": "singTest()",
+      "kind": "function"
+    },
+    {
+      "id": "fn:renderBreath",
+      "label": "renderBreath()",
       "kind": "function"
     },
     {
@@ -311,6 +506,11 @@
       "kind": "scale"
     },
     {
+      "id": "scale:mixolydian",
+      "label": "Mixolydian",
+      "kind": "scale"
+    },
+    {
       "id": "scale:minor",
       "label": "Natural Minor",
       "kind": "scale"
@@ -376,33 +576,38 @@
       "kind": "section"
     },
     {
-      "id": "section:Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼",
-      "label": "Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼",
+      "id": "section:Kiểm tra giọng &amp; dịch tông cho vừa giọng 🎤",
+      "label": "Kiểm tra giọng &amp; dịch tông cho vừa giọng 🎤",
       "kind": "section"
     },
     {
-      "id": "section:Bạn muốn người nghe nhớ mình là ai?",
-      "label": "Bạn muốn người nghe nhớ mình là ai?",
+      "id": "section:3. Note Studio — Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼",
+      "label": "3. Note Studio — Sóng âm → Nốt nhạc → Nhạc cụ phát lại 🎼",
       "kind": "section"
     },
     {
-      "id": "section:Phòng lab luyến láy",
-      "label": "Phòng lab luyến láy",
+      "id": "section:4. Phong cách — Bạn muốn người nghe nhớ mình là ai?",
+      "label": "4. Phong cách — Bạn muốn người nghe nhớ mình là ai?",
       "kind": "section"
     },
     {
-      "id": "section:Thang âm — “bảng màu” để bạn tự sáng tạo",
-      "label": "Thang âm — “bảng màu” để bạn tự sáng tạo",
+      "id": "section:4 · Phòng lab luyến láy",
+      "label": "4 · Phòng lab luyến láy",
       "kind": "section"
     },
     {
-      "id": "section:Xưởng bẻ câu hát — làm trên chính lời bài của bạn",
-      "label": "Xưởng bẻ câu hát — làm trên chính lời bài của bạn",
+      "id": "section:4 · Thang âm — “bảng màu” để bạn tự sáng tạo",
+      "label": "4 · Thang âm — “bảng màu” để bạn tự sáng tạo",
       "kind": "section"
     },
     {
-      "id": "section:Bản đồ cover độc bản của bạn",
-      "label": "Bản đồ cover độc bản của bạn",
+      "id": "section:5. Xưởng bẻ câu hát — làm trên chính lời bài của bạn",
+      "label": "5. Xưởng bẻ câu hát — làm trên chính lời bài của bạn",
+      "kind": "section"
+    },
+    {
+      "id": "section:6. Bản đồ cover độc bản của bạn",
+      "label": "6. Bản đồ cover độc bản của bạn",
       "kind": "section"
     }
   ],
@@ -445,6 +650,13 @@
     {
       "source": "fn:toast",
       "target": "fn:playSeq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderPlan",
+      "target": "fn:saveState",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -528,6 +740,13 @@
     },
     {
       "source": "fn:genRun",
+      "target": "fn:saveState",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:genRun",
       "target": "fn:scaleNotes",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
@@ -563,62 +782,125 @@
     },
     {
       "source": "fn:estimate",
+      "target": "fn:estimateKey",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:estimate",
       "target": "fn:fmt",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
-      "target": "fn:ac",
+      "source": "fn:estimateKey",
+      "target": "fn:autoCorr",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
+      "source": "fn:pear",
       "target": "fn:buildPiano",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
+      "source": "fn:pear",
+      "target": "fn:saveState",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:onFile",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:onFile",
       "target": "fn:drawWave",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
+      "source": "fn:onFile",
       "target": "fn:estimate",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
+      "source": "fn:onFile",
       "target": "fn:fmt",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
-      "target": "fn:playSeq",
+      "source": "fn:onFile",
+      "target": "fn:setFileProg",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
+      "source": "fn:onFile",
       "target": "fn:setupGraph",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:handleFile",
+      "source": "fn:onFile",
+      "target": "fn:showNS",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:onFile",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:onFile",
+      "target": "fn:transcribe",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setPracticeSpeed",
+      "target": "fn:buildPiano",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setPracticeSpeed",
+      "target": "fn:makeDemoNS",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setPracticeSpeed",
+      "target": "fn:saveState",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setPracticeSpeed",
       "target": "fn:toast",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
@@ -674,8 +956,15 @@
       "confidence_score": 1.0
     },
     {
+      "source": "fn:autoCorr",
+      "target": "fn:autoCorrFull",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
       "source": "fn:transcribe",
-      "target": "fn:autoCorr",
+      "target": "fn:autoCorrFull",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -704,6 +993,13 @@
     {
       "source": "fn:showNS",
       "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:showNS",
+      "target": "fn:updateTransposeUI",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -786,22 +1082,50 @@
       "confidence_score": 1.0
     },
     {
+      "source": "fn:updateSelUI",
+      "target": "fn:renderBreath",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateSelUI",
+      "target": "fn:updateNoteEditInfo",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
       "source": "fn:renderAdvice",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:d1",
       "target": "fn:applyBend",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:renderAdvice",
+      "source": "fn:d1",
       "target": "fn:noteName",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
-      "source": "fn:renderAdvice",
+      "source": "fn:d1",
       "target": "fn:nsStats",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:d1",
+      "target": "fn:renderAdvice",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -823,6 +1147,13 @@
     {
       "source": "fn:nearestScale",
       "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:nearestScale",
+      "target": "fn:saveState",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -878,6 +1209,13 @@
     },
     {
       "source": "fn:playNoteList",
+      "target": "fn:saveState",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:playNoteList",
       "target": "fn:selNotes",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
@@ -934,20 +1272,6 @@
     },
     {
       "source": "fn:up",
-      "target": "fn:addPlan",
-      "relation": "CALLS",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0
-    },
-    {
-      "source": "fn:up",
-      "target": "fn:applyBend",
-      "relation": "CALLS",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0
-    },
-    {
-      "source": "fn:up",
       "target": "fn:drawBigWave",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
@@ -955,14 +1279,14 @@
     },
     {
       "source": "fn:up",
-      "target": "fn:instTone",
+      "target": "fn:drawRoll",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
     },
     {
       "source": "fn:up",
-      "target": "fn:makeDemoNS",
+      "target": "fn:instTone",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -983,14 +1307,7 @@
     },
     {
       "source": "fn:up",
-      "target": "fn:nsStats",
-      "relation": "CALLS",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0
-    },
-    {
-      "source": "fn:up",
-      "target": "fn:playNoteList",
+      "target": "fn:saveState",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -1004,20 +1321,6 @@
     },
     {
       "source": "fn:up",
-      "target": "fn:setupGraph",
-      "relation": "CALLS",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0
-    },
-    {
-      "source": "fn:up",
-      "target": "fn:showNS",
-      "relation": "CALLS",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0
-    },
-    {
-      "source": "fn:up",
       "target": "fn:toast",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
@@ -1025,7 +1328,7 @@
     },
     {
       "source": "fn:up",
-      "target": "fn:transcribe",
+      "target": "fn:updateNoteEditInfo",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -1033,6 +1336,713 @@
     {
       "source": "fn:up",
       "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:activeEditList",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateNoteEditInfo",
+      "target": "fn:activeEditList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateNoteEditInfo",
+      "target": "fn:confTxt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateNoteEditInfo",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateNoteEditInfo",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:afterNoteEdit",
+      "target": "fn:activeEditList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:afterNoteEdit",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:afterNoteEdit",
+      "target": "fn:saveState",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:afterNoteEdit",
+      "target": "fn:updateNoteEditInfo",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:afterNoteEdit",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:afterNoteEdit",
+      "target": "fn:updateTransposeUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:needSelNote",
+      "target": "fn:activeEditList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:needSelNote",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:activeEditList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:addPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:afterNoteEdit",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:applyBend",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:bumpPractice",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:instTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:makeDemoNS",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:needSelNote",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:nsFmt",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:nsStats",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:playNoteList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:setupGraph",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteHomeArray",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setNsStep",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setNsStep",
+      "target": "fn:playNoteList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setNsStep",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setNsStep",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setNsStep",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:fillVoiceSelects",
+      "target": "fn:freq",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:fillVoiceSelects",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildMiniPiano",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildMiniPiano",
+      "target": "fn:fillVoiceSelects",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildMiniPiano",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildMiniPiano",
+      "target": "fn:playTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:buildMiniPiano",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderVoiceResult",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setVoiceRange",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setVoiceRange",
+      "target": "fn:renderVoiceResult",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setVoiceRange",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:setVoiceRange",
+      "target": "fn:updateTransposeUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:capturePitch",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:capturePitch",
+      "target": "fn:autoCorr",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:capturePitch",
+      "target": "fn:medianOf",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:live",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:fail",
+      "target": "fn:capturePitch",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:fail",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:fail",
+      "target": "fn:setVoiceRange",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:countOut",
+      "target": "fn:effRange",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:bestShift",
+      "target": "fn:countOut",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateTransposeUI",
+      "target": "fn:bestShift",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateTransposeUI",
+      "target": "fn:countOut",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateTransposeUI",
+      "target": "fn:effRange",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:updateTransposeUI",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:addPlan",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:bestShift",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:drawBigWave",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:effRange",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:updateSelUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:applyTranspose",
+      "target": "fn:updateTransposeUI",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:bumpPractice",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:practicePlay",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:practicePlay",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:once",
+      "target": "fn:bumpPractice",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:once",
+      "target": "fn:playNoteList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:once",
+      "target": "fn:setPracticeSpeed",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:once",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteByNote",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:noteByNote",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:step",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:step",
+      "target": "fn:instTone",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:step",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:recordUserPitch",
+      "target": "fn:ac",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:recordUserPitch",
+      "target": "fn:autoCorr",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:recordUserPitch",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:Y",
+      "target": "fn:X",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:Y",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:bumpPractice",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:drawCompare",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:medianOf",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:playNoteList",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:recordUserPitch",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:showSingMsg",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:singTest",
+      "target": "fn:toast",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderBreath",
+      "target": "fn:noteName",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderBreath",
+      "target": "fn:nsStats",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderBreath",
+      "target": "fn:renderVoiceResult",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderBreath",
+      "target": "fn:selNotes",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderBreath",
+      "target": "fn:setPracticeSpeed",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:renderBreath",
+      "target": "fn:updateTransposeUI",
       "relation": "CALLS",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0
@@ -1158,6 +2168,13 @@
     },
     {
       "source": "fn:scaleNotes",
+      "target": "scale:mixolydian",
+      "relation": "USES_SCALE",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "fn:scaleNotes",
       "target": "scale:minor",
       "relation": "USES_SCALE",
       "confidence": "EXTRACTED",
@@ -1203,8 +2220,8 @@
     "source": "code/app.js + index.html",
     "extraction": "deterministic, no LLM",
     "counts": {
-      "nodes": 81,
-      "edges": 113
+      "nodes": 122,
+      "edges": 229
     }
   }
 }

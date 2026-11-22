@@ -35,9 +35,10 @@ với đàn piano tương tác, xưởng bẻ câu hát trên chính lời ngư�
 
 ## Dữ liệu đã kiểm chứng (không đoán)
 
-- 1 file duy nhất `index.html`: 74.994 byte, 571 dòng, 43 hàm JS, 76 id.
-- 8 mục (h2), 5 phong cách, 5 nhạc cụ, 8 kỹ thuật lab, 6 thang âm
-  (Minor Pentatonic, Major Pentatonic, Blues, Dorian, Major, Natural Minor),
+- 1 file duy nhất `index.html`: 136.963 byte, 926 dòng, 82 hàm JS, 115 id.
+- 9 mục (h2), 5 phong cách, 5 nhạc cụ, 8 kỹ thuật lab, 7 thang âm
+  (Minor Pentatonic, Major Pentatonic, Blues, Dorian, Major, Natural Minor,
+  Mixolydian),
   6 chiêu bẻ nốt trong tư vấn (melisma, vibrato, run, octave, falsetto, bend).
 - Bài mẫu tổng hợp trong web: 22 nốt, đoạn cao trào 13–20 giây.
 
@@ -75,10 +76,10 @@ python3 -m venv ~/workspace/.graphify-venv
 python3 tools/build-cover-graph.py   # -> graphify-out/cover-graph.json
 ```
 
-Kết quả đã kiểm chứng ngày 2026-11-23:
+Kết quả đã kiểm chứng ngày 2026-11-23 (sau 3 vòng cải tiến, v0.2.0):
 
-- Graph chính thức: **43 node, 107 edge, 7 community**, 94% EXTRACTED,
-  6% INFERRED, 0 token LLM. Nút trung tâm: `drawBigWave()` (9 edge),
-  `noteName()` (9), `updateSelUI()` (8), `ac()` (8), `toast()` (8).
-- Graph tính năng `cover-graph.json`: **81 node, 113 edge** — 43 hàm,
-  8 kỹ thuật, 8 mục, 6 chiêu bẻ, 6 thang âm, 5 nhạc cụ, 5 phong cách.
+- Graph chính thức: **80 node, 227 edge, 8 community**, 97% EXTRACTED,
+  3% INFERRED, 0 token LLM. Nút trung tâm: `noteName()` (22 edge),
+  `toast()` (16), `updateSelUI()` (12), `ac()` (12), `drawBigWave()` (11).
+- Graph tính năng `cover-graph.json`: **122 node, 229 edge** — 82 hàm,
+  8 kỹ thuật, 9 mục, 6 chiêu bẻ, 7 thang âm, 5 nhạc cụ, 5 phong cách.
